@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="httpbin.org Api pratice" tests="59" time="85.678">
+  <testsuite name="Auth methods / HTTP Basic Auth." id="a3c5e327-7079-4355-9278-3799ee91a53b" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="2.225"/>
+  <testsuite name="Auth methods / digest-auth" id="01c5c401-05a3-4aea-807e-cc0e977b19cc" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="1.624"/>
+  <testsuite name="Auth methods / bearer authentication." id="08d8b82e-e0a4-46d3-bec7-d66b0d7b79e7" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.877"/>
+  <testsuite name="Auth methods / Digest Auth + Algorithm." id="5beb7a79-ad68-462d-aa88-31ce8864a768" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.672"/>
+  <testsuite name="Auth methods / Digest Auth + Algorithm." id="534f6728-04cb-49fa-8e41-f9e782ca28d9" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="1.080"/>
+  <testsuite name="Auth methods / hidden-basic-auth" id="4dbbfde6-055b-4c6d-b5da-5f544203be09" timestamp="2025-04-16T11:48:13.782Z" tests="4" failures="1" errors="1" time="1.490">
+    <system-err><![CDATA[Iteration: 0
+
+---
+prerequestScriptError: await is only valid in async functions and the top level bodies of modules
+---
+]]></system-err>
+    <testcase name="Status code is 200" time="1.490" classname="AuthMethodsHiddenBasicAuth"/>
+    <testcase name="Body matches string" time="1.490" classname="AuthMethodsHiddenBasicAuth"/>
+    <testcase name="Status code name has string" time="1.490" classname="AuthMethodsHiddenBasicAuth"/>
+    <testcase name="Response time is less than 1000ms" time="1.490" classname="AuthMethodsHiddenBasicAuth">
+      <failure type="AssertionFailure" message="expected 1490 to be below 1000">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fa467563-a47f-48f3-bd83-689a80820fa5.]]>
+        <![CDATA[Collection name: httpbin.org Api pratice.]]>
+        <![CDATA[Request name: Auth methods / hidden-basic-auth.]]>
+        <![CDATA[Test description: Response time is less than 1000ms.]]>
+        <![CDATA[Error message: expected 1490 to be below 1000.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 1490 to be below 1000
+   at Object.eval sandbox-script.js:4:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Testing different HTTP verbs / New Request" id="57fb225f-7ae4-493e-93a2-ad5f12d8455c" timestamp="2025-04-16T11:48:13.782Z" tests="4" failures="0" errors="0" time="1.522">
+    <testcase name="Status code is 200" time="1.522" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Body matches string" time="1.522" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Status code name has string" time="1.522" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Content-Type is present" time="1.522" classname="TestingDifferentHttpVerbsNewRequest"/>
+  </testsuite>
+  <testsuite name="Testing different HTTP verbs / New Request" id="1af4250f-135d-40ec-8f68-be6034889c13" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Testing different HTTP verbs / New Request" id="5da1376c-7eb0-4b56-83ed-ac82f37bdbae" timestamp="2025-04-16T11:48:13.782Z" tests="5" failures="1" errors="0" time="0.604">
+    <testcase name="Status code is 200" time="0.604" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Body matches string" time="0.604" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Content-Type is present" time="0.604" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Response time is less than 500ms" time="0.604" classname="TestingDifferentHttpVerbsNewRequest">
+      <failure type="AssertionFailure" message="expected 604 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fa467563-a47f-48f3-bd83-689a80820fa5.]]>
+        <![CDATA[Collection name: httpbin.org Api pratice.]]>
+        <![CDATA[Request name: Testing different HTTP verbs / New Request.]]>
+        <![CDATA[Test description: Response time is less than 500ms.]]>
+        <![CDATA[Error message: expected 604 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 604 to be below 500
+   at Object.eval sandbox-script.js:4:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code name has string" time="0.604" classname="TestingDifferentHttpVerbsNewRequest"/>
+  </testsuite>
+  <testsuite name="Testing different HTTP verbs / New Request" id="89529cbd-dd60-43d5-8999-48cb487efe96" timestamp="2025-04-16T11:48:13.782Z" tests="5" failures="1" errors="0" time="0.276">
+    <testcase name="Status code is 200" time="0.276" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Body matches string" time="0.276" classname="TestingDifferentHttpVerbsNewRequest">
+      <failure type="AssertionFailure" message="expected '{\n  &quot;args&quot;: {}, \n  &quot;data&quot;: &quot;&quot;, \n  …' to include 'empty'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fa467563-a47f-48f3-bd83-689a80820fa5.]]>
+        <![CDATA[Collection name: httpbin.org Api pratice.]]>
+        <![CDATA[Request name: Testing different HTTP verbs / New Request.]]>
+        <![CDATA[Test description: Body matches string.]]>
+        <![CDATA[Error message: expected '{\n  "args": {}, \n  "data": "", \n  …' to include 'empty'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '{\n  "args": {}, \n  "data": "", \n  …' to include 'empty'
+   at Object.eval sandbox-script.js:2:10).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response time is less than 200ms" time="0.276" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Content-Type is present" time="0.276" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Status code name has string" time="0.276" classname="TestingDifferentHttpVerbsNewRequest"/>
+  </testsuite>
+  <testsuite name="Testing different HTTP verbs / New Request" id="4cc18d87-58ce-49f2-a53a-cdd492b86d0c" timestamp="2025-04-16T11:48:13.782Z" tests="5" failures="1" errors="0" time="1.254">
+    <testcase name="Status code is 200" time="1.254" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Body matches string" time="1.254" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Content-Type is present" time="1.254" classname="TestingDifferentHttpVerbsNewRequest"/>
+    <testcase name="Response time is less than 500ms" time="1.254" classname="TestingDifferentHttpVerbsNewRequest">
+      <failure type="AssertionFailure" message="expected 1254 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fa467563-a47f-48f3-bd83-689a80820fa5.]]>
+        <![CDATA[Collection name: httpbin.org Api pratice.]]>
+        <![CDATA[Request name: Testing different HTTP verbs / New Request.]]>
+        <![CDATA[Test description: Response time is less than 500ms.]]>
+        <![CDATA[Error message: expected 1254 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 1254 to be below 500
+   at Object.eval sandbox-script.js:4:11).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code name has string" time="1.254" classname="TestingDifferentHttpVerbsNewRequest"/>
+  </testsuite>
+  <testsuite name="Status codes / New Request" id="628e5150-6dae-4849-a911-cf0ceaf4147c" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="0.902">
+    <testcase name="Status code is 500" time="0.902" classname="StatusCodesNewRequest"/>
+    <testcase name="Status code name has string" time="0.902" classname="StatusCodesNewRequest"/>
+  </testsuite>
+  <testsuite name="Status codes / New Request Copy" id="ee5c267b-57a9-4924-9967-52972894d0ba" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="0.265">
+    <testcase name="Status code is 500" time="0.265" classname="StatusCodesNewRequestCopy"/>
+    <testcase name="Status code name has string" time="0.265" classname="StatusCodesNewRequestCopy"/>
+  </testsuite>
+  <testsuite name="Status codes / request" id="b73d44a1-8c7d-484d-a2c1-fea03727817a" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Status codes / request Copy" id="37ac4875-4eb0-48a3-8ed8-4c7fe55bf1bc" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Request inspection / Returns a 304 if an If-Modified-Since header or If-None-Match is present. Returns the same as a GET otherwise." id="009e27c5-0c6f-4a04-a694-103724f6852b" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Request inspection / Returns a 304 if an If-Modified-Since header or If-None-Match is present. Returns the same as a GET otherwise." id="0b939c53-f2b1-45e9-81f4-2d5c91ee1838" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="0.445">
+    <testcase name="Status code is 304" time="0.445" classname="RequestInspectionReturnsA304IfAnIfModifiedSinceHeaderOrIfNoneMatchIsPresentReturnsTheSameAsAGetOtherwise"/>
+    <testcase name="Status code name has string" time="0.445" classname="RequestInspectionReturnsA304IfAnIfModifiedSinceHeaderOrIfNoneMatchIsPresentReturnsTheSameAsAGetOtherwise"/>
+  </testsuite>
+  <testsuite name="Request inspection / Sets a Cache-Control header for n seconds. Parameters" id="62be6a29-447c-49cb-92f9-d32a989a558d" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.318"/>
+  <testsuite name="Request inspection / Assumes the resource has the given etag and responds to If-None-Match and If-Match headers appropriately." id="c5603551-af07-49fd-b303-c052eaefd3a8" timestamp="2025-04-16T11:48:13.782Z" tests="1" failures="0" errors="0" time="1.857">
+    <testcase name="Status code is 200" time="1.857" classname="RequestInspectionAssumesTheResourceHasTheGivenEtagAndRespondsToIfNoneMatchAndIfMatchHeadersAppropriately"/>
+  </testsuite>
+  <testsuite name="Request inspection / 412 PRECONDITION FAILED The server doesn't meet the criteria set in request header." id="056a2bca-7f38-401d-8f07-1679a37cbe7a" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Request inspection / Returns a set of response headers from the query string." id="04ac9765-7ff6-4a72-8b19-84c24eabdf19" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="0.734">
+    <testcase name="Status code is 200" time="0.734" classname="RequestInspectionReturnsASetOfResponseHeadersFromTheQueryString"/>
+    <testcase name="Content-Type is present" time="0.734" classname="RequestInspectionReturnsASetOfResponseHeadersFromTheQueryString"/>
+  </testsuite>
+  <testsuite name="Request inspection / match the cache 200" id="0d921151-7b05-45e3-85b4-b6042b89265c" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.763"/>
+  <testsuite name="Request inspection / Returns a set of response headers from the query string." id="550fbfca-7ce8-476a-82ca-aee3a80239a5" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="0.622">
+    <testcase name="Status code is 200" time="0.622" classname="RequestInspectionReturnsASetOfResponseHeadersFromTheQueryString"/>
+    <testcase name="Body matches string" time="0.622" classname="RequestInspectionReturnsASetOfResponseHeadersFromTheQueryString"/>
+  </testsuite>
+  <testsuite name="Response formats / Returns Brotli-encoded data." id="dddba477-bafd-49bd-8daa-851afb4b41c3" timestamp="2025-04-16T11:48:13.782Z" tests="3" failures="0" errors="0" time="0.761">
+    <testcase name="Status code is 200" time="0.761" classname="ResponseFormatsReturnsBrotliEncodedData"/>
+    <testcase name="Body matches string" time="0.761" classname="ResponseFormatsReturnsBrotliEncodedData"/>
+    <testcase name="Content-Type is present" time="0.761" classname="ResponseFormatsReturnsBrotliEncodedData"/>
+  </testsuite>
+  <testsuite name="Response formats / Returns Deflate-encoded data." id="bf174f64-2c50-42e7-acf8-3f9b55352d85" timestamp="2025-04-16T11:48:13.782Z" tests="3" failures="0" errors="0" time="0.527">
+    <testcase name="Status code is 200" time="0.527" classname="ResponseFormatsReturnsDeflateEncodedData"/>
+    <testcase name="Body matches string" time="0.527" classname="ResponseFormatsReturnsDeflateEncodedData"/>
+    <testcase name="Content-Type is present" time="0.527" classname="ResponseFormatsReturnsDeflateEncodedData"/>
+  </testsuite>
+  <testsuite name="Response formats / Returns page denied by robots.txt rules." id="9d6523ab-68e8-441e-af1a-03e9c5157b83" timestamp="2025-04-16T11:48:13.782Z" tests="3" failures="0" errors="0" time="0.252">
+    <testcase name="Status code is 200" time="0.252" classname="ResponseFormatsReturnsPageDeniedByRobotsTxtRules"/>
+    <testcase name="Status code name has string" time="0.252" classname="ResponseFormatsReturnsPageDeniedByRobotsTxtRules"/>
+    <testcase name="Content-Type is present" time="0.252" classname="ResponseFormatsReturnsPageDeniedByRobotsTxtRules"/>
+  </testsuite>
+  <testsuite name="Response formats / Returns a UTF-8 encoded body" id="7d159833-05b8-40ec-8524-0cdfd426ea7f" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="3.065"/>
+  <testsuite name="Response formats / Returns GZip-encoded data." id="2e25cf18-2eda-43e2-b94d-95b33a8f8b8e" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.590"/>
+  <testsuite name="Response formats / Returns a simple HTML document." id="e160d2a7-0b5e-4d3f-9d70-17c928047a98" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="1.117">
+    <testcase name="Status code is 200" time="1.117" classname="ResponseFormatsReturnsASimpleHtmlDocument"/>
+    <testcase name="Body matches string" time="1.117" classname="ResponseFormatsReturnsASimpleHtmlDocument"/>
+  </testsuite>
+  <testsuite name="Response formats / Returns a simple JSON document." id="b4cc22f7-9e74-400c-a0bc-6d43049eedab" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.279"/>
+  <testsuite name="Response formats / Returns some robots.txt rules." id="f195fc87-8a4d-46a9-bbf9-7af42baaa374" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.255"/>
+  <testsuite name="Response formats / Returns a simple XML document." id="ceeed488-f691-49d0-a86d-7640a7e64d6d" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Dynamic data / Decodes base64url-encoded string." id="98e1951f-3665-46f4-b3e3-c38d62f9fd36" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="0.335"/>
+  <testsuite name="Dynamic data / Returns n random bytes generated with given seed" id="43b78e09-3e5d-4f9e-8d5c-71a0685862ee" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Dynamic data / Returns a delayed response (max of 10 seconds)." id="38f848f2-8142-4acf-b375-b862018f8782" timestamp="2025-04-16T11:48:13.782Z" tests="1" failures="0" errors="0" time="10.731">
+    <testcase name="Status code is 200" time="10.731" classname="DynamicDataReturnsADelayedResponseMaxOf10Seconds"/>
+  </testsuite>
+  <testsuite name="Dynamic data / Returns a delayed response (max of 10 seconds)." id="048cbf28-d669-47ae-b795-54badc53cc36" timestamp="2025-04-16T11:48:13.782Z" tests="3" failures="0" errors="0" time="1.917">
+    <testcase name="Status code is 500" time="1.917" classname="DynamicDataReturnsADelayedResponseMaxOf10Seconds"/>
+    <testcase name="Body matches string" time="1.917" classname="DynamicDataReturnsADelayedResponseMaxOf10Seconds"/>
+    <testcase name="Status code name has string" time="1.917" classname="DynamicDataReturnsADelayedResponseMaxOf10Seconds"/>
+  </testsuite>
+  <testsuite name="Dynamic data / Returns a delayed response (max of 10 seconds)." id="bf4c0c2b-9094-4747-a2d2-b7d38d16d911" timestamp="2025-04-16T11:48:13.782Z" tests="1" failures="0" errors="0" time="8.113">
+    <testcase name="Status code is 200" time="8.113" classname="DynamicDataReturnsADelayedResponseMaxOf10Seconds"/>
+  </testsuite>
+  <testsuite name="Dynamic data / Returns a delayed response (max of 10 seconds)." id="923baffc-7b6e-4601-9f32-bdfe1a9cc765" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="6.057"/>
+  <testsuite name="Dynamic data / Returns a delayed response (max of 10 seconds)." id="8a1dba27-162e-44a3-9ca8-f2aa352bb794" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="5.249"/>
+  <testsuite name="Dynamic data / Returns a delayed response (max of 10 seconds)." id="e0b7bd47-564d-4668-b986-106119dd3483" timestamp="2025-04-16T11:48:13.782Z" tests="1" failures="0" errors="0" time="6.492">
+    <testcase name="Status code is 200" time="6.492" classname="DynamicDataReturnsADelayedResponseMaxOf10Seconds"/>
+  </testsuite>
+  <testsuite name="Dynamic data / Drips data over a duration after an optional initial delay." id="f506c291-da3d-428f-887e-9c4006d8cb9f" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="1" errors="0" time="7.343">
+    <testcase name="Status code is 200" time="7.343" classname="DynamicDataDripsDataOverADurationAfterAnOptionalInitialDelay"/>
+    <testcase name="Content-Type is present" time="7.343" classname="DynamicDataDripsDataOverADurationAfterAnOptionalInitialDelay">
+      <failure type="AssertionFailure" message="expected 'Content-Length' response header to be '100' but got '636'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fa467563-a47f-48f3-bd83-689a80820fa5.]]>
+        <![CDATA[Collection name: httpbin.org Api pratice.]]>
+        <![CDATA[Request name: Dynamic data / Drips data over a duration after an optional initial delay..]]>
+        <![CDATA[Test description: Content-Type is present.]]>
+        <![CDATA[Error message: expected 'Content-Length' response header to be '100' but got '636'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'Content-Length' response header to be '100' but got '636'
+   at Object.eval sandbox-script.js:2:41).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Dynamic data / Generate a page containing n links to other pages which do the same" id="2f1ecf86-1b7c-460e-ab7f-e9b6b783da24" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="2.151">
+    <testcase name="Status code is 200" time="2.151" classname="DynamicDataGenerateAPageContainingNLinksToOtherPagesWhichDoTheSame"/>
+    <testcase name="Body matches string" time="2.151" classname="DynamicDataGenerateAPageContainingNLinksToOtherPagesWhichDoTheSame"/>
+  </testsuite>
+  <testsuite name="Dynamic data / Streams n random bytes generated with given seed, at given chunk size per packet." id="e19baadb-e890-4e27-a70c-79e4b953926b" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Dynamic data / Streams n random bytes generated with given seed, at given chunk size per packet." id="644eaac4-0d17-484c-8b14-29f83f38cf6e" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Dynamic data / Stream n JSON responses" id="d81425d6-ee4d-425b-93cf-bb44b392fe9f" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Dynamic data / Return a UUID4." id="05d5c7fb-6f88-4f94-a0b1-eef13ee653ab" timestamp="2025-04-16T11:48:13.782Z" tests="2" failures="0" errors="0" time="0.908">
+    <testcase name="Status code is 200" time="0.908" classname="DynamicDataReturnAUuid4"/>
+    <testcase name="Body matches string" time="0.908" classname="DynamicDataReturnAUuid4"/>
+  </testsuite>
+  <testsuite name="Cookies / Sets cookie(s) as provided by the query string and redirects to cookie list." id="9b00dec1-b9d1-4bc9-ba75-94701a23d6f0" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Cookies / Sets a cookie and redirects to cookie list." id="e90c1889-1d0e-4c2f-8d01-841d480d9398" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Cookies / Returns cookie data." id="f5b22469-a0ca-46da-8a92-c002db2b129f" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Cookies / Deletes cookie(s) as provided by the query string and redirects to cookie list." id="b73c07e4-d1c5-466a-ad2e-7b0612ca3c06" timestamp="2025-04-16T11:48:13.782Z" tests="1" failures="0" errors="0" time="1.588">
+    <testcase name="Status code is 200" time="1.588" classname="CookiesDeletesCookieSAsProvidedByTheQueryStringAndRedirectsToCookieList"/>
+  </testsuite>
+  <testsuite name="Cookies / Deletes cookie(s) as provided by the query string and redirects to cookie list. Copy" id="43b3079a-4d0d-4dca-ac29-bbff0875bccc" timestamp="2025-04-16T11:48:13.782Z" tests="1" failures="1" errors="0" time="4.894">
+    <testcase name="Status code is 200" time="4.894" classname="CookiesDeletesCookieSAsProvidedByTheQueryStringAndRedirectsToCookieListCopy">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 502">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: fa467563-a47f-48f3-bd83-689a80820fa5.]]>
+        <![CDATA[Collection name: httpbin.org Api pratice.]]>
+        <![CDATA[Request name: Cookies / Deletes cookie(s) as provided by the query string and redirects to cookie list. Copy.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 502.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 502
+   at Object.eval sandbox-script.js:1:51).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="images / Returns a simple image of the type suggest by the Accept header." id="fa400f21-a4b6-4438-a96c-be3d1747f4ee" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="images / Returns a simple JPEG image." id="6fe3320c-8460-44a1-bcf0-14fc73d84eca" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="images / Returns a simple PNG image." id="6154f1ce-5877-4671-8cec-03c0dc9717df" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="images / Returns a simple SVG image." id="55b1c197-1c3a-437d-a6fc-bb52b1bf9dbc" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="images / Returns a simple WEBP image." id="3d408a60-5e90-4d5f-b90f-f7a475fc0561" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Redirect / Absolutely 302 Redirects n times." id="7ee2a73b-3353-43c8-a03b-06a0be6f5c13" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Redirect / 302/3XX Redirects to the given URL." id="126e174a-61fa-4709-8e69-29f8490a4ca5" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="1.752"/>
+  <testsuite name="Redirect / 302/3XX Redirects to the given URL." id="f8218f2f-31d7-45de-baef-0245b73e7cdd" timestamp="2025-04-16T11:48:13.782Z" tests="0" failures="0" errors="0" time="1.068"/>
+</testsuites>

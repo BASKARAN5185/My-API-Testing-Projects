@@ -1,0 +1,543 @@
+{
+	"info": {
+		"_postman_id": "f8d2bc61-43da-4904-b7c1-fdba1ff77d2c",
+		"name": "Simple Grocery Store API",
+		"description": "Practice api testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24695592"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "Get all products",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Json response body presanst the id,name,category,inStock\",function(){\r",
+									"    var jsondata=pm.response.json();\r",
+									"    jsondata.forEach(function(items){\r",
+									"    pm.expect(items).to.have.property(\"id\");\r",
+									"    pm.expect(items).to.have.property(\"name\");\r",
+									"    pm.expect(items).to.have.property(\"category\");\r",
+									"    pm.expect(items).to.have.property(\"inStock\");\r",
+									"    \r",
+									"    })\r",
+									"    \r",
+									"});\r",
+									"\r",
+									"pm.test(\"Json response body presanst\" ,function(){\r",
+									"    var jsondata=pm.response.json();\r",
+									"    pm.expect(jsondata.id);\r",
+									"\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Each item contains 'id', 'category', 'name', and 'inStock'\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"\r",
+									"    jsonData.forEach(function(item) {\r",
+									"        pm.expect(item).to.have.property('id');\r",
+									"        pm.expect(item).to.have.property('category');\r",
+									"        pm.expect(item).to.have.property('name');\r",
+									"        pm.expect(item).to.have.property('inStock');\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/products",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a single product from the inventory.Specifies the product's id you wish to retrieve",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Json response body presanst product id ,name,category,inStock\" ,function(){\r",
+									"    var jsonData=pm.response.json();\r",
+									"     pm.expect(jsonData.name).to.eql(\"Ethical Bean Medium Dark Roast, Espresso\");  // Check product name\r",
+									"     // Check category\r",
+									"    pm.expect(jsonData.category).to.eql(\"coffee\");  \r",
+									"    // 'inStock'should be a boolean\r",
+									"    pm.expect(jsonData.inStock).to.be.a('boolean');  \r",
+									"\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/products/:productId",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"products",
+								":productId"
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "4646"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Returns a single product from the inventory.Specifies the product's id you wish to retrieve Returns the product label in PDF format",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Json response body presanst product id ,name,category,inStock\" ,function(){\r",
+									"    var jsonData=pm.response.json();\r",
+									"     pm.expect(jsonData.name).to.eql(\"Ethical Bean Medium Dark Roast, Espresso\");  // Check product name\r",
+									"     // Check category\r",
+									"    pm.expect(jsonData.category).to.eql(\"coffee\");  \r",
+									"    // 'inStock'should be a boolean\r",
+									"    pm.expect(jsonData.inStock).to.be.a('boolean');  \r",
+									"\r",
+									"});\r",
+									"\r",
+									"pm.test(\"verify the json data present proprty are product-label,current-stock,price,manufacturer \",function(){\r",
+									"   var JsonData=pm.response.json();\r",
+									"   pm.expect(JsonData).to.have.property('product-label');\r",
+									"\r",
+									"\r",
+									"})\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/products/:productId?product-label=true",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"products",
+								":productId"
+							],
+							"query": [
+								{
+									"key": "product-label",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "4646"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "404 Not found  : Indicates that there is no product with the specified id.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.expect(\"Verify the Response code as 404\",function(){\r",
+									"    pm.response.to.have.status(404)\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/products/:productId?product-label=true",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"products",
+								":productId"
+							],
+							"query": [
+								{
+									"key": "product-label",
+									"value": "true"
+								}
+							],
+							"variable": [
+								{
+									"key": "productId",
+									"value": "4649"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Grocery product API Testing"
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Create a new cart : To create a new cart, submit an empty POST request to the /carts endpoint.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the staus code in 201\",function(){\r",
+									"    pm.response.to.have.status(201);\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/carts",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return the cart Specifies the id of the cart you wish to retrieve.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/carts/:cartId",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts",
+								":cartId"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "{{cartid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Return the cart Indicates that there is no cart with the specified id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/carts/:cartId",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts",
+								":cartId"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "{{cartid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Specifies the id of the cart for which you wish to retrieve the items.200 OK\tIndicates a successful response.",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/carts/:cartId/items",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "404 Not found\tIndicates that there is no cart with the specified id.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the status code 404 \",function(){\r",
+									"    pm.response.to.have.status(404)\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{grocery store}}/carts/:cartId/items",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "w9vCkiM1BHhF4rQAIt88U"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an item to cart 201 Created\tIndicates that the item has been added successfully.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the status code 201 \",function(){\r",
+									"    pm.response.to.have.status(201)\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"productId\": 4646\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{grocery store}}/carts/:cartId/items",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "{{cartid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add an item to cart 400 Bad Request\tIndicates that the parameters provided are invalid.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Verify the status code 400 \",function(){\r",
+									"    pm.response.to.have.status(400)\r",
+									"})"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"productId\": 1234\r\n   \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{grocery store}}/carts/:cartId/items",
+							"host": [
+								"{{grocery store}}"
+							],
+							"path": [
+								"carts",
+								":cartId",
+								"items"
+							],
+							"variable": [
+								{
+									"key": "cartId",
+									"value": "{{cartid}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Add the product as cart"
+		},
+		{
+			"name": "This API allows you to place a grocery order which will be ready for pick-up in the store.",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GET /status  Returns the status of the API. Example response:Status UP indicates that the API is running as expected.",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"status\": \"UP\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://simple-grocery-store-api.glitch.me/status",
+					"protocol": "https",
+					"host": [
+						"simple-grocery-store-api",
+						"glitch",
+						"me"
+					],
+					"path": [
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "grocery store",
+			"value": "https://simple-grocery-store-api.glitch.me",
+			"type": "string"
+		},
+		{
+			"key": "cartid",
+			"value": "w9vCkiM1BHhF4rQAIL88U"
+		}
+	]
+}

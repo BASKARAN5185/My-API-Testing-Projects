@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "64226d59-8a78-47ea-aa88-bd1c663594b0",
+		"name": "jsonplaceholder Api Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24695592"
+	},
+	"item": [
+		{
+			"name": "Status code 200 : The request was successful, and the server returned the expected response.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"// Ensure the response code text is as expected\r",
+							"pm.test(\"Verify response code text\", function () {\r",
+							"    pm.expect(pm.response.status).to.be.oneOf(['OK']);\r",
+							"});\r",
+							"pm.test(\"Verify response body content\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"quia et suscipit\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"suscipit recusandae consequuntur expedita et cum\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"reprehenderit molestiae ut ut quas totam\");\r",
+							"    pm.expect(pm.response.text()).to.include(\"nostrum rerum est autem sunt rem eveniet architecto\");\r",
+							"});\r",
+							"pm.test(\"Verify response body has userId and id\", function () {\r",
+							"   pm.response.to.have.jsonBody(\"id\",1);\r",
+							"   pm.response.to.have.jsonBody(\"userId\",1);\r",
+							"   \r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status code 201 :The request has been fulfilled, and a new resource was created",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function () {\r",
+							"    pm.response.to.have.status(201);\r",
+							"});\r",
+							"// Ensure the response code text is as expected\r",
+							"pm.test(\"Verify response code text\", function () {\r",
+							"    pm.expect(pm.response.status).to.be.oneOf(['Created']);\r",
+							"});\r",
+							"pm.test(\"Verify the body id response\", function () {\r",
+							"    pm.response.to.have.jsonBody(\"id\", 101);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Status code 204 :The request was successful, but there is no content to return",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify the response code 204 \",function(){\r",
+							"    pm.response.to.have.status(204)\r",
+							"})\r",
+							"pm.test(\"Verify the response body text\",function(){\r",
+							"    pm.expect(pm.response.status).to.be.oneOf(['No content']);\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/1",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "404 Bad Request  Meaning: Requested resource could not be found.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Verify the status code 404\",function(){\r",
+							"\r",
+							"    pm.response.to.have.status(404);\r",
+							"})\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Not Found\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "prerequest",
+					"script": {
+						"packages": {},
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://jsonplaceholder.typicode.com/posts/abc",
+					"protocol": "https",
+					"host": [
+						"jsonplaceholder",
+						"typicode",
+						"com"
+					],
+					"path": [
+						"posts",
+						"abc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "401 Unauthorised Meaning: Authentication is required, and the user is not authenticated.",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "403 Forbidden  Meaning: The request is valid, but the server refuses to authorize it.",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

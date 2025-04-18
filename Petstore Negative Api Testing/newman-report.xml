@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Petstore Negative Api Testing" tests="10" time="3.187">
+  <testsuite name="correct request" id="8156034a-68c0-43b6-9b91-82d6efad8ac5" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Bad Request 400 (id = eqw, give the string vale is 400 bad request),The server could not understand the request. Maybe a bad syntax?" id="da8fd203-c7be-4fbe-904e-df05960eb259" timestamp="2025-04-16T12:00:00.005Z" tests="4" failures="2" errors="0" time="1.155">
+    <testcase name="Status code is 400" time="1.155" classname="BadRequest400IdEqwGiveTheStringValeIs400BadRequestTheServerCouldNotUnderstandTheRequestMaybeABadSyntax"/>
+    <testcase name="Status code name has string" time="1.155" classname="BadRequest400IdEqwGiveTheStringValeIs400BadRequestTheServerCouldNotUnderstandTheRequestMaybeABadSyntax"/>
+    <testcase name="Response time is less than 200ms" time="1.155" classname="BadRequest400IdEqwGiveTheStringValeIs400BadRequestTheServerCouldNotUnderstandTheRequestMaybeABadSyntax">
+      <failure type="AssertionFailure" message="expected 1155 to be below 500">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: cc876387-058f-4985-8abc-b4471c2d6170.]]>
+        <![CDATA[Collection name: Petstore Negative Api Testing.]]>
+        <![CDATA[Request name: Bad Request 400 (id = eqw, give the string vale is 400 bad request),The server could not understand the request. Maybe a bad syntax?.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected 1155 to be below 500.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 1155 to be below 500
+   at Object.eval sandbox-script.js:3:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Body is correct" time="1.155" classname="BadRequest400IdEqwGiveTheStringValeIs400BadRequestTheServerCouldNotUnderstandTheRequestMaybeABadSyntax">
+      <failure type="AssertionFailure" message="expected response body to equal 'unknown' but got '{&quot;code&quot;:400,&quot;type&quot;:&quot;unknown&quot;,&quot;message…'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: cc876387-058f-4985-8abc-b4471c2d6170.]]>
+        <![CDATA[Collection name: Petstore Negative Api Testing.]]>
+        <![CDATA[Request name: Bad Request 400 (id = eqw, give the string vale is 400 bad request),The server could not understand the request. Maybe a bad syntax?.]]>
+        <![CDATA[Test description: Body is correct.]]>
+        <![CDATA[Error message: expected response body to equal 'unknown' but got '{"code":400,"type":"unknown","message…'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response body to equal 'unknown' but got '{"code":400,"type":"unknown","message…'
+   at Object.eval sandbox-script.js:4:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="405 Method Not Allowed ,post request change in get request,Use of the request method is not allowed on the resource." id="c0e5ea3a-a431-4b4f-acb3-d9868836676e" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="500 Server Error, The body id =ddd string given get this response.The server has encountered a situation it does not know how to handle." id="c198a296-3fb3-4557-8b80-51c69b4b9fb0" timestamp="2025-04-16T12:00:00.005Z" tests="3" failures="0" errors="0" time="0.236">
+    <testcase name="Status code is 500" time="0.236" classname="500ServerErrorTheBodyIdDddStringGivenGetThisResponseTheServerHasEncounteredASituationItDoesNotKnowHowToHandle"/>
+    <testcase name="Body matches string" time="0.236" classname="500ServerErrorTheBodyIdDddStringGivenGetThisResponseTheServerHasEncounteredASituationItDoesNotKnowHowToHandle"/>
+    <testcase name="Status code name has string" time="0.236" classname="500ServerErrorTheBodyIdDddStringGivenGetThisResponseTheServerHasEncounteredASituationItDoesNotKnowHowToHandle"/>
+  </testsuite>
+  <testsuite name="415 Unsupported Media Type, not give any body content .The media format of the requested data is not supported by the server." id="eecf047b-4561-4b28-945a-5dd45f4772c8" timestamp="2025-04-16T12:00:00.005Z" tests="3" failures="0" errors="0" time="0.232">
+    <testcase name="Status code is 415" time="0.232" classname="415UnsupportedMediaTypeNotGiveAnyBodyContentTheMediaFormatOfTheRequestedDataIsNotSupportedByTheServer"/>
+    <testcase name="Body matches string" time="0.232" classname="415UnsupportedMediaTypeNotGiveAnyBodyContentTheMediaFormatOfTheRequestedDataIsNotSupportedByTheServer"/>
+    <testcase name="Status code name has string" time="0.232" classname="415UnsupportedMediaTypeNotGiveAnyBodyContentTheMediaFormatOfTheRequestedDataIsNotSupportedByTheServer"/>
+  </testsuite>
+  <testsuite name="400 Bad Request.The body is &quot; } &quot; remove this. The server could not understand the request. Maybe a bad syntax?" id="8feb59b8-d058-4d20-91fc-39ff91d70afd" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="0" time="0.242"/>
+  <testsuite name="500 Server Error,body String content given the paragraphy , The server has encountered a situation it does not know how to handle." id="403b408d-13f5-4ef5-802b-16bf14cbcecf" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="0" time="0.863"/>
+  <testsuite name="New Request" id="17642811-3850-46cf-b004-9ae8346920be" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="New Request" id="6fc8cb10-ed13-473d-b30f-f5bb9b9b15f8" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="0" time="0.229"/>
+  <testsuite name="New Request" id="754b6b14-dd20-461e-b547-9f8e38b6d1bc" timestamp="2025-04-16T12:00:00.005Z" tests="0" failures="0" errors="0" time="0.230"/>
+</testsuites>

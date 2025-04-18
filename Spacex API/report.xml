@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="SpaceX API Docs" tests="43" time="13.500">
+  <testsuite name="Capsules / All Capsules  - Retrieve all capsule data and ensure it is correct." id="ba2bdb0d-ecae-453f-a2de-d17b1d9a664b" timestamp="2025-04-16T12:24:08.968Z" tests="5" failures="1" errors="0" time="1.012">
+    <testcase name="Status code is 200" time="1.012" classname="CapsulesAllCapsulesRetrieveAllCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Content-Type is present" time="1.012" classname="CapsulesAllCapsulesRetrieveAllCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 1000ms" time="1.012" classname="CapsulesAllCapsulesRetrieveAllCapsuleDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected 1012 to be below 1000">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Capsules / All Capsules  - Retrieve all capsule data and ensure it is correct..]]>
+        <![CDATA[Test description: Response time is less than 1000ms.]]>
+        <![CDATA[Error message: expected 1012 to be below 1000.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 1012 to be below 1000
+   at Object.eval sandbox-script.js:3:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="verify the json body data capsule_serial,capsule_id,status" time="1.012" classname="CapsulesAllCapsulesRetrieveAllCapsuleDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Capsules / All Capsules  - 404 Not Found Cause: The requested resource or endpoint does not exist." id="0b69cd93-98fc-4491-a6ea-b91776258831" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="0" errors="0" time="0.259">
+    <testcase name="Status code is 404" time="0.259" classname="CapsulesAllCapsules404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist"/>
+  </testsuite>
+  <testsuite name="Capsules / All Capsules  - 400 Bad Request ,Verify GET request with missing required parameters" id="fab238c7-44df-4acf-bbf2-8c1f61b96f48" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="0" errors="0" time="0.246">
+    <testcase name="Status code is 404" time="0.246" classname="CapsulesAllCapsules400BadRequestVerifyGetRequestWithMissingRequiredParameters"/>
+  </testsuite>
+  <testsuite name="Capsules / One Capsule - Retrieve Single capsule data and ensure it is correct" id="aa58b4df-395b-454e-bf17-f7b08fd79064" timestamp="2025-04-16T12:24:08.968Z" tests="10" failures="0" errors="0" time="0.244">
+    <testcase name="verify the json body data capsule_serial,capsule_id,status" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Capsule serial is C113" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Capsule ID is dragon1" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="First mission is CRS-12" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Second mission is CRS-17" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Capsule status is active" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Capsule has 2 landings" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Capsule details are correct" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Capsule reuse count is 1" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Status code is 200" time="0.244" classname="CapsulesOneCapsuleRetrieveSingleCapsuleDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Capsules / One Capsule - 404 Not Found Cause: The requested resource or endpoint does not exist." id="84222c5f-29d1-4e8e-aa5a-9ef9b28474d3" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="0" errors="0" time="0.260">
+    <testcase name="Status code is 404" time="0.260" classname="CapsulesOneCapsule404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist"/>
+  </testsuite>
+  <testsuite name="Capsules / One Capsule - 404 Not Found Cause: The requested resource or endpoint does not exist." id="80fde4a6-2e08-4439-a531-be8ed9d19c2b" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="0" errors="0" time="0.251">
+    <testcase name="Status code is 404" time="0.251" classname="CapsulesOneCapsule404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist"/>
+  </testsuite>
+  <testsuite name="Capsules / One Capsule - 404 Not Found Cause: The requested resource or endpoint does not exist." id="3e3b9153-79a4-4464-86d7-f1372f62a807" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="0" errors="0" time="0.245">
+    <testcase name="Status code is 404" time="0.245" classname="CapsulesOneCapsule404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist"/>
+  </testsuite>
+  <testsuite name="Capsules / Upcoming Capsules -Retrieve Upcoming capsule data and ensure it is correct" id="86ad1b57-6156-45f4-8389-281030e834b6" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.250">
+    <testcase name="Status code is 200" time="0.250" classname="CapsulesUpcomingCapsulesRetrieveUpcomingCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Body matches capsule_serial" time="0.250" classname="CapsulesUpcomingCapsulesRetrieveUpcomingCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Body not matches capsule_serial" time="0.250" classname="CapsulesUpcomingCapsulesRetrieveUpcomingCapsuleDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Capsules / Upcoming Capsules -404 Not Found Cause: The requested resource or endpoint does not exist." id="852f77bd-d636-448c-b228-decd2efcc8e1" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="2" errors="0" time="0.258">
+    <testcase name="Status code is 200" time="0.258" classname="CapsulesUpcomingCapsules404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Capsules / Upcoming Capsules -404 Not Found Cause: The requested resource or endpoint does not exist..]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Body matches capsule_serial" time="0.258" classname="CapsulesUpcomingCapsules404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist">
+      <failure type="AssertionFailure" message="expected '{&quot;error&quot;:&quot;Not Found&quot;}' to include 'C204'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Capsules / Upcoming Capsules -404 Not Found Cause: The requested resource or endpoint does not exist..]]>
+        <![CDATA[Test description: Body matches capsule_serial.]]>
+        <![CDATA[Error message: expected '{"error":"Not Found"}' to include 'C204'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected '{"error":"Not Found"}' to include 'C204'
+   at Object.eval sandbox-script.js:2:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Body not matches capsule_serial" time="0.258" classname="CapsulesUpcomingCapsules404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist"/>
+  </testsuite>
+  <testsuite name="Capsules / Past Capsules - Retrieve older capsule data and ensure it is correct" id="f55bca6d-1361-4d5c-831e-f34f5a852698" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.272">
+    <testcase name="Status code is 200" time="0.272" classname="CapsulesPastCapsulesRetrieveOlderCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Body matches capsule_serial" time="0.272" classname="CapsulesPastCapsulesRetrieveOlderCapsuleDataAndEnsureItIsCorrect"/>
+    <testcase name="Body not matches capsule_serial" time="0.272" classname="CapsulesPastCapsulesRetrieveOlderCapsuleDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Capsules / Past Capsules -404 Not Found Cause: The requested resource or endpoint does not exist." id="e75f2f13-afc2-4c0f-92ef-d5f66aee3798" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="0" errors="0" time="0.242">
+    <testcase name="Status code is 404" time="0.242" classname="CapsulesPastCapsules404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExist"/>
+  </testsuite>
+  <testsuite name="Cores / All Cores -  Retrieve all Cores data and ensure it is correct." id="d47791ca-642d-4de1-9a44-f17493a90714" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.265">
+    <testcase name="Status code is 200" time="0.265" classname="CoresAllCoresRetrieveAllCoresDataAndEnsureItIsCorrect"/>
+    <testcase name="Core data is returned correctly" time="0.265" classname="CoresAllCoresRetrieveAllCoresDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Cores / All Cores -  Validate data array contains 69 items ." id="187d7a1d-fbbc-43d5-b652-375d4688bb21" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.298">
+    <testcase name="Status code is 200" time="0.298" classname="CoresAllCoresValidateDataArrayContains69Items"/>
+    <testcase name="Validate response contains 69 items" time="0.298" classname="CoresAllCoresValidateDataArrayContains69Items"/>
+  </testsuite>
+  <testsuite name="Cores / All Cores -  Validate data array not contains 70 items ." id="08ed34c5-6cdb-4b67-b707-02e691d5bff3" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.281">
+    <testcase name="Status code is 200" time="0.281" classname="CoresAllCoresValidateDataArrayNotContains70Items"/>
+    <testcase name="Validate response contains 68 items" time="0.281" classname="CoresAllCoresValidateDataArrayNotContains70Items"/>
+  </testsuite>
+  <testsuite name="Cores / One Core - Retrieve Single Cores data and ensure it is correct." id="63c5d35c-bad5-4328-96f2-1dae0b9dac15" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.257">
+    <testcase name="Status code is 200" time="0.257" classname="CoresOneCoreRetrieveSingleCoresDataAndEnsureItIsCorrect"/>
+    <testcase name="verify the json body data capsule_serial" time="0.257" classname="CoresOneCoreRetrieveSingleCoresDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Cores / One Core - 404 Not Found Cause: The requested resource or endpoint does not exist. Copy" id="34acef76-7e8f-4cda-aaf8-9bf1e237518b" timestamp="2025-04-16T12:24:08.968Z" tests="1" failures="1" errors="0" time="0.240">
+    <testcase name="Status code is 404" time="0.240" classname="CoresOneCore404NotFoundCauseTheRequestedResourceOrEndpointDoesNotExistCopy">
+      <failure type="AssertionFailure" message="expected response to have status code 404 but got 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Cores / One Core - 404 Not Found Cause: The requested resource or endpoint does not exist. Copy.]]>
+        <![CDATA[Test description: Status code is 404.]]>
+        <![CDATA[Error message: expected response to have status code 404 but got 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 404 but got 200
+   at Object.eval sandbox-script.js:1:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Cores / Upcoming Cores - Retrieve UpComing Cores data and ensure it is correct." id="0992c55d-0099-4207-a8b3-4ca861f419ea" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.245">
+    <testcase name="verify the json body data capsule_serial" time="0.245" classname="CoresUpcomingCoresRetrieveUpComingCoresDataAndEnsureItIsCorrect"/>
+    <testcase name="Validate response contains above 0 items" time="0.245" classname="CoresUpcomingCoresRetrieveUpComingCoresDataAndEnsureItIsCorrect"/>
+    <testcase name="Status code is 200" time="0.245" classname="CoresUpcomingCoresRetrieveUpComingCoresDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Cores / Past Cores - Retrieve Past Cores data and ensure it is correct." id="4b0e35e4-163b-49a5-a9fd-b331bf9a7c84" timestamp="2025-04-16T12:24:08.968Z" tests="0" failures="0" errors="0" time="0.247"/>
+  <testsuite name="Dragons / All Dragons  - Retrieve All Dragons data and ensure it is correct." id="cb63bb8f-a464-4121-a154-b0bce357fdc1" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.245">
+    <testcase name="Status code is 200" time="0.245" classname="DragonsAllDragonsRetrieveAllDragonsDataAndEnsureItIsCorrect"/>
+    <testcase name="Retrieve Dragons data and ensure it is correct ID" time="0.245" classname="DragonsAllDragonsRetrieveAllDragonsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Dragons / One Dragon -  Retrieve Single Dragons data and ensure it is correct." id="7fabb06c-e6e7-408d-90df-825cb414d4b1" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.244">
+    <testcase name="Status code is 200" time="0.244" classname="DragonsOneDragonRetrieveSingleDragonsDataAndEnsureItIsCorrect"/>
+    <testcase name="Retrieve Dragons data and ensure it is correct ID" time="0.244" classname="DragonsOneDragonRetrieveSingleDragonsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="History / All Historical Events - Retrieve All Historical Events data and ensure it is correct." id="29edc6d6-5dfd-45d0-bb2a-eec8c1be4df7" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="1" errors="0" time="0.285">
+    <testcase name="Retrieve Event data and ensure it is correct" time="0.285" classname="HistoryAllHistoricalEventsRetrieveAllHistoricalEventsDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected undefined to deeply equal 'On March 30, 2017, SpaceX achieved th…'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: History / All Historical Events - Retrieve All Historical Events data and ensure it is correct..]]>
+        <![CDATA[Test description: Retrieve Event data and ensure it is correct.]]>
+        <![CDATA[Error message: expected undefined to deeply equal 'On March 30, 2017, SpaceX achieved th…'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to deeply equal 'On March 30, 2017, SpaceX achieved th…'
+   at Object.eval sandbox-script.js:1:21).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code is 200" time="0.285" classname="HistoryAllHistoricalEventsRetrieveAllHistoricalEventsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="History / One Historical Event  - Retrieve Single  Historical Events data and ensure it is correct." id="73884742-fae6-4a66-ba12-14b9de48340f" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.243">
+    <testcase name="Status code is 200" time="0.243" classname="HistoryOneHistoricalEventRetrieveSingleHistoricalEventsDataAndEnsureItIsCorrect"/>
+    <testcase name="Response body contains 'First Reflight'" time="0.243" classname="HistoryOneHistoricalEventRetrieveSingleHistoricalEventsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Info / Company Info - Retrieve All Company Info data and ensure it is correct." id="c60baa63-f7b4-48a6-8cd6-729741889f25" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.250">
+    <testcase name="Status code is 200" time="0.250" classname="InfoCompanyInfoRetrieveAllCompanyInfoDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify All the company info retrive from the API" time="0.250" classname="InfoCompanyInfoRetrieveAllCompanyInfoDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Info / API Info - Retrieve API Info data and ensure it is correct." id="d65503a1-e90a-49be-9bde-37c69888f991" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.249">
+    <testcase name="Status code is 200" time="0.249" classname="InfoApiInfoRetrieveApiInfoDataAndEnsureItIsCorrect"/>
+    <testcase name="Body is correct" time="0.249" classname="InfoApiInfoRetrieveApiInfoDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Landing Pads / All Landing Pads - Retrieve All Landing Pads data and ensure it is correct." id="0e304e6e-181f-4dac-b704-96fe033d721e" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.268">
+    <testcase name="Status code is 200" time="0.268" classname="LandingPadsAllLandingPadsRetrieveAllLandingPadsDataAndEnsureItIsCorrect"/>
+    <testcase name="Body is correct" time="0.268" classname="LandingPadsAllLandingPadsRetrieveAllLandingPadsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Landing Pads / One Landing Pad - Retrieve Single Landing Pads data and ensure it is correct." id="1fa8ce46-f38d-4bbd-9d13-4a2ff8a2e460" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.253">
+    <testcase name="Status code is 200" time="0.253" classname="LandingPadsOneLandingPadRetrieveSingleLandingPadsDataAndEnsureItIsCorrect"/>
+    <testcase name="Body is correct" time="0.253" classname="LandingPadsOneLandingPadRetrieveSingleLandingPadsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launches / All Launches - Retrieve All Launches data and ensure it is correct." id="3d2544a7-aace-412e-8e08-a9212253440c" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.810">
+    <testcase name="Status code is 200" time="0.810" classname="LaunchesAllLaunchesRetrieveAllLaunchesDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify this json body response" time="0.810" classname="LaunchesAllLaunchesRetrieveAllLaunchesDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launches / One Launch - Retrieve  Single Launches data and ensure it is correct." id="26a3c7d7-553c-42b1-8760-b0db33f9d69b" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.260">
+    <testcase name="Status code is 200" time="0.260" classname="LaunchesOneLaunchRetrieveSingleLaunchesDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify this json body response" time="0.260" classname="LaunchesOneLaunchRetrieveSingleLaunchesDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launches / Past Launches - Retrieve Past Launchches data and ensure it is correct." id="9a793be5-9df2-4e59-8143-705f01e3c54f" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="1.158">
+    <testcase name="Status code is 200" time="1.158" classname="LaunchesPastLaunchesRetrievePastLaunchchesDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify this json body response" time="1.158" classname="LaunchesPastLaunchesRetrievePastLaunchchesDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launches / Upcoming Launches - Retrieve UpComing Launches data and ensure it is correct." id="81139f9f-d16a-4a3c-994c-d01fc95f27c1" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.282">
+    <testcase name="Status code is 200" time="0.282" classname="LaunchesUpcomingLaunchesRetrieveUpComingLaunchesDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify this json body response" time="0.282" classname="LaunchesUpcomingLaunchesRetrieveUpComingLaunchesDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launches / Latest Launch - Retrieve Latest Launches data and ensure it is correct." id="03e68b0a-57b2-4f09-aaed-0984d787b96e" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="2" errors="0" time="0.379">
+    <testcase name="Status code is 200" time="0.379" classname="LaunchesLatestLaunchRetrieveLatestLaunchesDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Launches / Latest Launch - Retrieve Latest Launches data and ensure it is correct..]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 404
+   at Object.eval sandbox-script.js:1:31).]]>
+      </failure>
+    </testcase>
+    <testcase name="Verify this json body response" time="0.379" classname="LaunchesLatestLaunchRetrieveLatestLaunchesDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="Unexpected token 'N' at 1:1&#xA;Not Found&#xA;^">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Launches / Latest Launch - Retrieve Latest Launches data and ensure it is correct..]]>
+        <![CDATA[Test description: Verify this json body response.]]>
+        <![CDATA[Error message: Unexpected token 'N' at 1:1
+Not Found
+^.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token 'N' at 1:1
+Not Found
+^
+   at Object.eval sandbox-script.js:2:31).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Launches / Next Launch - Retrieve Next Launches data and ensure it is correct." id="990a45a4-4ec5-4f5d-9886-6d84bf68f164" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.241">
+    <testcase name="Status code is 200" time="0.241" classname="LaunchesNextLaunchRetrieveNextLaunchesDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify this json body response" time="0.241" classname="LaunchesNextLaunchRetrieveNextLaunchesDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launch Pads / All Launchpads - Retrieve All Launchpads data and ensure it is correct." id="44021616-0d1e-40aa-9ed7-2dd6a15954d1" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="0" errors="0" time="0.300">
+    <testcase name="Status code is 200" time="0.300" classname="LaunchPadsAllLaunchpadsRetrieveAllLaunchpadsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify Json body content verification " time="0.300" classname="LaunchPadsAllLaunchpadsRetrieveAllLaunchpadsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Launch Pads / One Launchpad - Retrieve Single Launchpads data and ensure it is correct." id="77798100-b4ff-4d4e-8d80-d9e5ad115da5" timestamp="2025-04-16T12:24:08.968Z" tests="2" failures="1" errors="0" time="0.241">
+    <testcase name="Status code is 200" time="0.241" classname="LaunchPadsOneLaunchpadRetrieveSingleLaunchpadsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify Json body content verification " time="0.241" classname="LaunchPadsOneLaunchpadRetrieveSingleLaunchpadsDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected undefined to deeply equal 6">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Launch Pads / One Launchpad - Retrieve Single Launchpads data and ensure it is correct..]]>
+        <![CDATA[Test description: Verify Json body content verification .]]>
+        <![CDATA[Error message: expected undefined to deeply equal 6.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to deeply equal 6
+   at Object.eval sandbox-script.js:2:34).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Missions / All Missions - Retrieve All Missions data and ensure it is correct." id="a8a0a9e0-9e98-4838-a9ed-24f7e44a2c2b" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.249">
+    <testcase name="Status code is 200" time="0.249" classname="MissionsAllMissionsRetrieveAllMissionsDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.249" classname="MissionsAllMissionsRetrieveAllMissionsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.249" classname="MissionsAllMissionsRetrieveAllMissionsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Missions / One Mission - Retrieve Single Mission data and ensure it is correct." id="afab4814-0ecc-49be-ab57-be9b5b4d39e7" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="1" errors="0" time="0.245">
+    <testcase name="Status code is 200" time="0.245" classname="MissionsOneMissionRetrieveSingleMissionDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.245" classname="MissionsOneMissionRetrieveSingleMissionDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.245" classname="MissionsOneMissionRetrieveSingleMissionDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected undefined to equal 'JCSAT'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Missions / One Mission - Retrieve Single Mission data and ensure it is correct..]]>
+        <![CDATA[Test description: Verify The Response Body.]]>
+        <![CDATA[Error message: expected undefined to equal 'JCSAT'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'JCSAT'
+   at Object.eval sandbox-script.js:3:36).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Payloads / All Payloads - Retrieve All Payloads data and ensure it is correct." id="cec3411b-e46c-41bb-ad3d-12e28490a1a9" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.325">
+    <testcase name="Status code is 200" time="0.325" classname="PayloadsAllPayloadsRetrieveAllPayloadsDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.325" classname="PayloadsAllPayloadsRetrieveAllPayloadsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.325" classname="PayloadsAllPayloadsRetrieveAllPayloadsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Payloads / One Payload - Retrieve One payload data and ensure it is correct." id="3fa5cbd0-e3be-425d-8bb4-369b324e7c6c" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="1" errors="0" time="0.327">
+    <testcase name="Status code is 200" time="0.327" classname="PayloadsOnePayloadRetrieveOnePayloadDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.327" classname="PayloadsOnePayloadRetrieveOnePayloadDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.327" classname="PayloadsOnePayloadRetrieveOnePayloadDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected undefined to equal 'PSat 2'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Payloads / One Payload - Retrieve One payload data and ensure it is correct..]]>
+        <![CDATA[Test description: Verify The Response Body.]]>
+        <![CDATA[Error message: expected undefined to equal 'PSat 2'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'PSat 2'
+   at Object.eval sandbox-script.js:3:38).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Rockets / All Rockets - Retrieve All Rockets data and ensure it is correct." id="8d41ad22-064d-4193-97e3-86689867ff7c" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.272">
+    <testcase name="Status code is 200" time="0.272" classname="RocketsAllRocketsRetrieveAllRocketsDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.272" classname="RocketsAllRocketsRetrieveAllRocketsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.272" classname="RocketsAllRocketsRetrieveAllRocketsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Rockets / One Rocket - Retrieve One Rockets data and ensure it is correct." id="7f304d42-be16-42ca-af23-e78ec8b7b6d0" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="1" errors="0" time="0.245">
+    <testcase name="Status code is 200" time="0.245" classname="RocketsOneRocketRetrieveOneRocketsDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.245" classname="RocketsOneRocketRetrieveOneRocketsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.245" classname="RocketsOneRocketRetrieveOneRocketsDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected undefined to equal 'falconheavy'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Rockets / One Rocket - Retrieve One Rockets data and ensure it is correct..]]>
+        <![CDATA[Test description: Verify The Response Body.]]>
+        <![CDATA[Error message: expected undefined to equal 'falconheavy'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'falconheavy'
+   at Object.eval sandbox-script.js:3:40).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Roadster / Roadster - Retrieve Roadster data and ensure it is correct." id="fe9b613e-c573-4a02-bbc9-594e56ce45d5" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.244">
+    <testcase name="Status code is 200" time="0.244" classname="RoadsterRoadsterRetrieveRoadsterDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.244" classname="RoadsterRoadsterRetrieveRoadsterDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.244" classname="RoadsterRoadsterRetrieveRoadsterDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Ships / All Ships - Retrieve All Ships data and ensure it is correct." id="c9a4da26-504b-41dd-b382-0918a9ef9b19" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="0" errors="0" time="0.261">
+    <testcase name="Status code is 200" time="0.261" classname="ShipsAllShipsRetrieveAllShipsDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.261" classname="ShipsAllShipsRetrieveAllShipsDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.261" classname="ShipsAllShipsRetrieveAllShipsDataAndEnsureItIsCorrect"/>
+  </testsuite>
+  <testsuite name="Ships / One Ship - Retrieve Single ship data and ensure it is correct." id="c39cf1db-e76c-4fae-887a-685030de0f24" timestamp="2025-04-16T12:24:08.968Z" tests="3" failures="1" errors="0" time="0.252">
+    <testcase name="Status code is 200" time="0.252" classname="ShipsOneShipRetrieveSingleShipDataAndEnsureItIsCorrect"/>
+    <testcase name="Response time is less than 200ms" time="0.252" classname="ShipsOneShipRetrieveSingleShipDataAndEnsureItIsCorrect"/>
+    <testcase name="Verify The Response Body" time="0.252" classname="ShipsOneShipRetrieveSingleShipDataAndEnsureItIsCorrect">
+      <failure type="AssertionFailure" message="expected undefined to equal 'PACIFICWARRIOR'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: bd55d6b7-025d-4f0b-a05f-ea7642c1cda8.]]>
+        <![CDATA[Collection name: SpaceX API Docs.]]>
+        <![CDATA[Request name: Ships / One Ship - Retrieve Single ship data and ensure it is correct..]]>
+        <![CDATA[Test description: Verify The Response Body.]]>
+        <![CDATA[Error message: expected undefined to equal 'PACIFICWARRIOR'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'PACIFICWARRIOR'
+   at Object.eval sandbox-script.js:3:43).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

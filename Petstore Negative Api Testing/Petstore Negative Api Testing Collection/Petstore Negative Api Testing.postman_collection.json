@@ -1,0 +1,310 @@
+{
+	"info": {
+		"_postman_id": "cc876387-058f-4985-8abc-b4471c2d6170",
+		"name": "Petstore Negative Api Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24695592"
+	},
+	"item": [
+		{
+			"name": "correct request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Bad Request 400 (id = eqw, give the string vale is 400 bad request),The server could not understand the request. Maybe a bad syntax?",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Fixed ReferenceError: p is not defined\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Bad Request\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"pm.test(\"Body is correct\", function () {\r",
+							"    pm.response.to.have.body(\"unknown\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": hk,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"Dog\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "405 Method Not Allowed ,post request change in get request,Use of the request method is not allowed on the resource.",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "500 Server Error, The body id =ddd string given get this response.The server has encountered a situation it does not know how to handle.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 500\", function () {\r",
+							"    pm.response.to.have.status(500);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"something bad happened\");\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Server Error\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"Rabbit\"\r\n  },\r\n  \"name\": \"Rabbit\",\r\n  \"photoUrls\": [\r\n    \"Rabbit\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": a,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "415 Unsupported Media Type, not give any body content .The media format of the requested data is not supported by the server.",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 415\", function () {\r",
+							"    pm.response.to.have.status(415);\r",
+							"});\r",
+							"pm.test(\"Body matches string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"unknown\");\r",
+							"});\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Unsupported Media Type\");\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "400 Bad Request.The body is \" } \" remove this. The server could not understand the request. Maybe a bad syntax?",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"\"\r\n  },\r\n  \"name\": \"Rabbit\",\r\n  \"photoUrls\": [\r\n    \"Rabbit\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "500 Server Error,body String content given the paragraphy , The server has encountered a situation it does not know how to handle.",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 0,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"The Midnight Adventure of Luna and the Moonbeam\r\n\r\nOnce upon a time, in a small village nestled between green hills, there lived a little girl named Luna. Luna had a secret—she wasn’t afraid of the dark. In fact, she loved it. Every night, she would sit by her window, gazing at the stars and the glowing moon. But one particular night, as the clock struck midnight, something magical happened.\r\n\r\nAs Luna peered out of her window, a soft, shimmering light appeared in the sky. It wasn't the usual moonlight, but something brighter, like a silver ribbon floating down from the stars. Before she could blink, the light slipped through her open window and wrapped itself gently around her. It was a Moonbeam!\r\n\r\n\"Hello, Luna!\" the Moonbeam whispered, its voice as soft as a lullaby. \"Would you like to go on an adventure?\"\r\n\r\nLuna's eyes widened with excitement. \"An adventure? Where to?\"\r\n\r\n\"To the Land of Dreams,\" said the Moonbeam, \"where the stars twinkle like jewels and the clouds are made of cotton candy!\"\r\n\r\nWithout hesitation, Luna grabbed her favorite teddy bear and stepped onto the Moonbeam. They floated up, up, higher than the tallest tree, higher than the highest mountain. The cool night air kissed her cheeks, and soon, they were soaring through the sky, past twinkling stars and the silver glow of the moon.\r\n\r\nIn the Land of Dreams, Luna found herself surrounded by sparkling rivers that glittered like diamonds, and fields of flowers that sang sweet songs when the wind blew. She danced with the fireflies, played hopscotch with the clouds, and even befriended a friendly, glowing owl who told her stories of the stars.\r\n\r\nBut as the night grew deeper, the Moonbeam whispered, “It’s time to return home, Luna. The stars will guide you.”\r\n\r\nWith a gentle swoop, the Moonbeam carried Luna back to her cozy room. She snuggled into her bed just as the first light of dawn began to peek over the horizon. As she drifted off to sleep, Luna smiled, knowing that the Land of Dreams was always there, waiting for her next midnight adventure.\r\n\r\nAnd from that night on, whenever the moon was full, Luna would wait by her window, hoping for another visit from the magical Moonbeam.\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 3,\r\n  \"category\": {\r\n    \"id\": 2,\r\n    \"name\": \"bbjj\"\r\n  },\r\n  \"name\": \"Rabbit\",\r\n  \"photoUrls\": [\r\n    \"Rabbit\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 0,\r\n      \"name\": \"string\"\r\n    }\r\n  ],\r\n  \"status\": \"available\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/11",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 1,\r\n  \"petId\": 1,\r\n  \"quantity\": 1,\r\n  \"shipDate\": \"2024-11-19T18:30:53.247Z\",\r\n  \"status\": \"placed\",\r\n  \"complete\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "html"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/store/order",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"store",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jsonplaceholder Api Testing" tests="6" time="1.884">
+  <testsuite name="Status code 200 : The request was successful, and the server returned the expected response." id="74dc9edb-dec2-4c49-978f-c2a982fd8d4a" timestamp="2025-04-16T11:58:50.164Z" tests="4" failures="0" errors="0" time="0.781">
+    <testcase name="Status code is 200" time="0.781" classname="StatusCode200TheRequestWasSuccessfulAndTheServerReturnedTheExpectedResponse"/>
+    <testcase name="Verify response code text" time="0.781" classname="StatusCode200TheRequestWasSuccessfulAndTheServerReturnedTheExpectedResponse"/>
+    <testcase name="Verify response body content" time="0.781" classname="StatusCode200TheRequestWasSuccessfulAndTheServerReturnedTheExpectedResponse"/>
+    <testcase name="Verify response body has userId and id" time="0.781" classname="StatusCode200TheRequestWasSuccessfulAndTheServerReturnedTheExpectedResponse"/>
+  </testsuite>
+  <testsuite name="Status code 201 :The request has been fulfilled, and a new resource was created" id="96b2a4f0-77f7-45d7-b3fc-98287bc88c88" timestamp="2025-04-16T11:58:50.164Z" tests="3" failures="0" errors="0" time="0.257">
+    <testcase name="Status code is 201" time="0.257" classname="StatusCode201TheRequestHasBeenFulfilledAndANewResourceWasCreated"/>
+    <testcase name="Verify response code text" time="0.257" classname="StatusCode201TheRequestHasBeenFulfilledAndANewResourceWasCreated"/>
+    <testcase name="Verify the body id response" time="0.257" classname="StatusCode201TheRequestHasBeenFulfilledAndANewResourceWasCreated"/>
+  </testsuite>
+  <testsuite name="Status code 204 :The request was successful, but there is no content to return" id="75ad2cca-57d3-432b-a21b-0a69b29692c0" timestamp="2025-04-16T11:58:50.164Z" tests="2" failures="2" errors="0" time="0.406">
+    <testcase name="Verify the response code 204 " time="0.406" classname="StatusCode204TheRequestWasSuccessfulButThereIsNoContentToReturn">
+      <failure type="AssertionFailure" message="expected response to have status code 204 but got 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 64226d59-8a78-47ea-aa88-bd1c663594b0.]]>
+        <![CDATA[Collection name: jsonplaceholder Api Testing.]]>
+        <![CDATA[Request name: Status code 204 :The request was successful, but there is no content to return.]]>
+        <![CDATA[Test description: Verify the response code 204 .]]>
+        <![CDATA[Error message: expected response to have status code 204 but got 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 204 but got 200
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Verify the response body text" time="0.406" classname="StatusCode204TheRequestWasSuccessfulButThereIsNoContentToReturn">
+      <failure type="AssertionFailure" message="expected 'OK' to be one of [ 'No content' ]">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 64226d59-8a78-47ea-aa88-bd1c663594b0.]]>
+        <![CDATA[Collection name: jsonplaceholder Api Testing.]]>
+        <![CDATA[Request name: Status code 204 :The request was successful, but there is no content to return.]]>
+        <![CDATA[Test description: Verify the response body text.]]>
+        <![CDATA[Error message: expected 'OK' to be one of [ 'No content' ].]]>
+        <![CDATA[Stacktrace: AssertionError: expected 'OK' to be one of [ 'No content' ]
+   at Object.eval sandbox-script.js:2:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="404 Bad Request  Meaning: Requested resource could not be found." id="b8240815-f371-4aef-96c2-22cad6ef47d6" timestamp="2025-04-16T11:58:50.164Z" tests="2" failures="0" errors="0" time="0.440">
+    <testcase name="Verify the status code 404" time="0.440" classname="404BadRequestMeaningRequestedResourceCouldNotBeFound"/>
+    <testcase name="Status code name has string" time="0.440" classname="404BadRequestMeaningRequestedResourceCouldNotBeFound"/>
+  </testsuite>
+  <testsuite name="401 Unauthorised Meaning: Authentication is required, and the user is not authenticated." id="95df803a-8a5e-489d-86de-9d72ba29e829" timestamp="2025-04-16T11:58:50.164Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="403 Forbidden  Meaning: The request is valid, but the server refuses to authorize it." id="adeb61d0-ebc7-41b9-ad37-59669d94d50e" timestamp="2025-04-16T11:58:50.164Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+</testsuites>

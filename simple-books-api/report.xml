@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="simple-books-api" tests="10" time="29.574">
+  <testsuite name="simple-books-api" id="d4c996a6-7f66-42e4-aa23-b6d048c8dd98" timestamp="2025-04-16T12:17:58.882Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Get the List of books" id="74091b91-026a-40fe-a114-e26df798be81" timestamp="2025-04-16T12:17:58.882Z" tests="1" failures="1" errors="0" time="26.252">
+    <testcase name="verify the response body Books ID" time="26.252" classname="GetTheListOfBooks">
+      <failure type="AssertionFailure" message="expected undefined to deeply equal 3">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get the List of books.]]>
+        <![CDATA[Test description: verify the response body Books ID.]]>
+        <![CDATA[Error message: expected undefined to deeply equal 3.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to deeply equal 3
+   at Object.eval sandbox-script.js:1:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Get a single book" id="950a3517-c25e-4948-a572-1124f9095ed6" timestamp="2025-04-16T12:17:58.882Z" tests="2" failures="0" errors="0" time="0.768">
+    <testcase name="Verify the status code" time="0.768" classname="GetASingleBook"/>
+    <testcase name="Verify the book ID and name" time="0.768" classname="GetASingleBook"/>
+  </testsuite>
+  <testsuite name="Status code 409 - &quot;API client already registered.&quot; Try changing the values for clientEmail and clientName to something else." id="342f079f-4532-4fba-84ce-d7d6cea3d92a" timestamp="2025-04-16T12:17:58.882Z" tests="1" failures="0" errors="0" time="0.338">
+    <testcase name="Status code is 409" time="0.338" classname="StatusCode409QuotApiClientAlreadyRegisteredQuotTryChangingTheValuesForClientEmailAndClientNameToSomethingElse"/>
+  </testsuite>
+  <testsuite name="API Authentication" id="ae38a58a-0f84-4b44-a2be-e5ac4396a3ca" timestamp="2025-04-16T12:17:58.882Z" tests="2" failures="0" errors="0" time="0.453">
+    <testcase name="Status code is 201" time="0.453" classname="ApiAuthentication"/>
+    <testcase name="Save accessToken to environment variable" time="0.453" classname="ApiAuthentication"/>
+  </testsuite>
+  <testsuite name="Submit an order  Allows you to submit a new order. Requires authentication." id="8f247c00-1d23-4526-af51-4564d3d8bac1" timestamp="2025-04-16T12:17:58.882Z" tests="2" failures="2" errors="0" time="0.435">
+    <testcase name="Status code is 201" time="0.435" classname="SubmitAnOrderAllowsYouToSubmitANewOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected response to have status code 201 but got 401">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Submit an order  Allows you to submit a new order. Requires authentication..]]>
+        <![CDATA[Test description: Status code is 201.]]>
+        <![CDATA[Error message: expected response to have status code 201 but got 401.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 201 but got 401
+   at Object.eval sandbox-script.js:1:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Response body has order details" time="0.435" classname="SubmitAnOrderAllowsYouToSubmitANewOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected { error: 'Invalid bearer token.' } in response to contain property 'created'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Submit an order  Allows you to submit a new order. Requires authentication..]]>
+        <![CDATA[Test description: Response body has order details.]]>
+        <![CDATA[Error message: expected { error: 'Invalid bearer token.' } in response to contain property 'created'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { error: 'Invalid bearer token.' } in response to contain property 'created'
+   at Object.eval sandbox-script.js:2:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Get all orders : Allows you to view all orders. Requires authentication" id="41d852e6-d762-41b5-9c3d-19fef7905ed9" timestamp="2025-04-16T12:17:58.882Z" tests="4" failures="4" errors="0" time="0.324">
+    <testcase name="Status code is 200" time="0.324" classname="GetAllOrdersAllowsYouToViewAllOrdersRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 401">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get all orders : Allows you to view all orders. Requires authentication.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 401.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 401
+   at Object.eval sandbox-script.js:1:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Order creation successful" time="0.324" classname="GetAllOrdersAllowsYouToViewAllOrdersRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected { error: 'Invalid bearer token.' } to have deep property 'id'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get all orders : Allows you to view all orders. Requires authentication.]]>
+        <![CDATA[Test description: Order creation successful.]]>
+        <![CDATA[Error message: expected { error: 'Invalid bearer token.' } to have deep property 'id'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { error: 'Invalid bearer token.' } to have deep property 'id'
+   at Object.eval sandbox-script.js:2:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Orders retrieved successfully" time="0.324" classname="GetAllOrdersAllowsYouToViewAllOrdersRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected { error: 'Invalid bearer token.' } to deeply equal [ { …(6) }, { …(6) } ]">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get all orders : Allows you to view all orders. Requires authentication.]]>
+        <![CDATA[Test description: Orders retrieved successfully.]]>
+        <![CDATA[Error message: expected { error: 'Invalid bearer token.' } to deeply equal [ { …(6) }, { …(6) } ].]]>
+        <![CDATA[Stacktrace: AssertionError: expected { error: 'Invalid bearer token.' } to deeply equal [ { …(6) }, { …(6) } ]
+   at Object.eval sandbox-script.js:3:7).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate id, bookId, and customerName" time="0.324" classname="GetAllOrdersAllowsYouToViewAllOrdersRequiresAuthentication">
+      <failure type="AssertionFailure" message="jsonData.forEach is not a function">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get all orders : Allows you to view all orders. Requires authentication.]]>
+        <![CDATA[Test description: Validate id, bookId, and customerName.]]>
+        <![CDATA[Error message: jsonData.forEach is not a function.]]>
+        <![CDATA[Stacktrace: TypeError: jsonData.forEach is not a function
+   at Object.eval sandbox-script.js:4:7).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Get an order : Allows you to view an existing order. Requires authentication." id="09db9869-592c-420c-becd-cad276881441" timestamp="2025-04-16T12:17:58.882Z" tests="3" failures="3" errors="0" time="0.346">
+    <testcase name="Status code is 200" time="0.346" classname="GetAnOrderAllowsYouToViewAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 401">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get an order : Allows you to view an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 401.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 401
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate id, bookId, and customerName" time="0.346" classname="GetAnOrderAllowsYouToViewAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected undefined to be a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get an order : Allows you to view an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Validate id, bookId, and customerName.]]>
+        <![CDATA[Error message: expected undefined to be a string.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a string
+   at Object.eval sandbox-script.js:2:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate specific order ID" time="0.346" classname="GetAnOrderAllowsYouToViewAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Get an order : Allows you to view an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Validate specific order ID.]]>
+        <![CDATA[Error message: expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'
+   at Object.eval sandbox-script.js:3:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Update an order : Update an existing order. Requires authentication." id="2090d593-32ac-4403-aea2-ed8bdf497eb5" timestamp="2025-04-16T12:17:58.882Z" tests="2" failures="2" errors="0" time="0.325">
+    <testcase name="Status code is 200" time="0.325" classname="UpdateAnOrderUpdateAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 401">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Update an order : Update an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 401.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 401
+   at Object.eval sandbox-script.js:1:9).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate id, bookId, and customerName" time="0.325" classname="UpdateAnOrderUpdateAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Update an order : Update an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Validate id, bookId, and customerName.]]>
+        <![CDATA[Error message: expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'
+   at Object.eval sandbox-script.js:2:9).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Delete an order DELETE : Delete an existing order. Requires authentication." id="02086373-f7d3-48f6-a2c9-879047a2f5ef" timestamp="2025-04-16T12:17:58.882Z" tests="2" failures="2" errors="0" time="0.333">
+    <testcase name="Status code is 200" time="0.333" classname="DeleteAnOrderDeleteDeleteAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected response to have status code 200 but got 401">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Delete an order DELETE : Delete an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected response to have status code 200 but got 401.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 200 but got 401
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+    <testcase name="Validate id, bookId, and customerName" time="0.333" classname="DeleteAnOrderDeleteDeleteAnExistingOrderRequiresAuthentication">
+      <failure type="AssertionFailure" message="expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 2ce11b1d-efb2-470b-8a40-461b6cba15ef.]]>
+        <![CDATA[Collection name: simple-books-api.]]>
+        <![CDATA[Request name: Delete an order DELETE : Delete an existing order. Requires authentication..]]>
+        <![CDATA[Test description: Validate id, bookId, and customerName.]]>
+        <![CDATA[Error message: expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to equal 'YuJblyL-T1_KgUUlv4NXK'
+   at Object.eval sandbox-script.js:2:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+</testsuites>

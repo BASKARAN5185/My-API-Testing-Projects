@@ -1,0 +1,748 @@
+{
+	"info": {
+		"_postman_id": "38059c55-44ff-40fe-b7fe-656baed7081c",
+		"name": "Art Institute of Chicago API",
+		"description": "StartFragment\n\n## Introduction\n\nThe [Art Institute of Chicago&nbsp;(opens new window)](https://www.artic.edu/)'s API provides JSON-formatted data as a REST-style service that allows developers to explore and integrate the museum’s public data into their projects. This API is the same tool that powers our [website&nbsp;(opens new window)](https://www.artic.edu/), our [mobile app&nbsp;(opens new window)](https://www.artic.edu/visit/explore-on-your-own/mobile-app-audio-tours), and many other technologies in the museum.\n\nIf the application you're building will be public, please send it our way! We'd love to share it alongside some of the [other projects that use our API&nbsp;(opens new window)](https://www.artic.edu/open-access/public-api). \n\nEndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24695592",
+		"_collection_link": "https://universal-equinox-751375.postman.co/workspace/API-Testing-Practice-work-space~bc77a0e3-cd24-4b9b-8cb1-1090d44fd756/collection/24695592-38059c55-44ff-40fe-b7fe-656baed7081c?action=share&source=collection_link&creator=24695592"
+	},
+	"item": [
+		{
+			"name": "Pagination",
+			"item": [
+				{
+					"name": "You can paginate through results using page and limit params:",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=3&limit=100\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "100\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "You can paginate through results using page and limit params: Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Check if the 'pagination' object contains correct data\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.pagination).to.have.property(\"current_page\").that.is.a(\"number\");\r",
+									"    pm.expect(jsonData.pagination.current_page).to.eql(3);  // Verifies the current_page is 3\r",
+									"    pm.expect(jsonData.pagination.limit).to.eql(100);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=3&limit=100\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								},
+								{
+									"key": "limit",
+									"value": "100\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "You can paginate through results using page total 1277 i give the -1278 response must be given  as  400 Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=-1278&limit=100\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "-1278"
+								},
+								{
+									"key": "limit",
+									"value": "100\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "You can paginate through results 10000000",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=1270&limit=10000000\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1270"
+								},
+								{
+									"key": "limit",
+									"value": "10000000\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "You can paginate through results using page total 1277 i give the 1278 response must be given  as  400",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=1278&limit=100\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1278"
+								},
+								{
+									"key": "limit",
+									"value": "100\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "You can paginate through results limit : -1 status code 500",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 500\", function () {\r",
+									"    pm.response.to.have.status(500);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=1278&limit=-1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1278"
+								},
+								{
+									"key": "limit",
+									"value": "-1\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "You can paginate through results limit : xyz status code 500 Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 403\", function () {\r",
+									"    pm.response.to.have.status(403);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?page=1278&limit=xyz\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1278"
+								},
+								{
+									"key": "limit",
+									"value": "xyz\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid in EndPoint show the status code 400",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks/invalidEndpoint?page=1278&limit=1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks",
+								"invalidEndpoint"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1278"
+								},
+								{
+									"key": "limit",
+									"value": "1\n"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Invalid in EndPoint show the status code verison chande the url showing the odoo error 404",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 404\", function () {\r",
+									"    pm.response.to.have.status(404);\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v5/artworks/invalidEndpoint?page=1278&limit=1\n",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v5",
+								"artworks",
+								"invalidEndpoint"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1278"
+								},
+								{
+									"key": "limit",
+									"value": "1\n"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Test case positive and nagative ."
+		},
+		{
+			"name": "Basic API Validation",
+			"item": [
+				{
+					"name": "Quick Start : An API (opens new window)is a structured way that one software application can talk to another. APIs power much of the software we use today, from the apps on our phones and watches to technology we see in sports and TV shows. We have built",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "If you want to see data for just one artwork, you can use the /artworks/{id} detail endpoint. For example, here's Starry Night and the Astronauts (opens new window)by Alma Thomas:",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Check if title is correct\", function () {\r",
+									"    pm.response.to.have.jsonBody('title');\r",
+									"    pm.response.to.have.jsonBody('title', 'Starry Night and the Astronauts');\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks/129884",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks",
+								"129884"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "To retrieve a specific set of fields in Postman from the Art Institute of Chicago API, you can use the fields parameter to specify which data you want to be included in the response.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// Get the data array from the response\r",
+									"let responseData = pm.response.json().data;\r",
+									"\r",
+									"// Loop through each item in the data array\r",
+									"responseData.forEach(item => {\r",
+									"    // Test to check if the \"id\" field is present\r",
+									"    pm.test(`ID is present for artwork: ${item.title}`, function () {\r",
+									"        pm.expect(item).to.have.property('id');\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks?fields=id,title,artist_display,date_display,main_reference_number",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "id,title,artist_display,date_display,main_reference_number"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "If you want to search and filter the results, you can do so via our search endpoints. For example, here is a full-text search (opens new window)for all artworks whose metadata contains some mention of cats: https://api.artic.edu/api/v1/artworks/search?q=c",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks/search?q=cats",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "cats"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "If you want to search and filter the results, filter is valid stauts code is 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks/search?q=1--",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "1--"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Empty query  is valid status code is 200",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks/search?q=",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Test Case: Search with special characters or SQL injection terms.",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.artic.edu/api/v1/artworks/search?q=%27OR%201=1--",
+							"protocol": "https",
+							"host": [
+								"api",
+								"artic",
+								"edu"
+							],
+							"path": [
+								"api",
+								"v1",
+								"artworks",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "%27OR%201=1--"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

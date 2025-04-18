@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Simple Grocery Store API" tests="13" time="6.210">
+  <testsuite name="Products / Get all products" id="405d52bc-6985-4fff-8938-38429a8e878e" timestamp="2025-04-16T12:13:06.599Z" tests="3" failures="0" errors="0" time="1.193">
+    <testcase name="Json response body presanst the id,name,category,inStock" time="1.193" classname="ProductsGetAllProducts"/>
+    <testcase name="Json response body presanst" time="1.193" classname="ProductsGetAllProducts"/>
+    <testcase name="Each item contains 'id', 'category', 'name', and 'inStock'" time="1.193" classname="ProductsGetAllProducts"/>
+  </testsuite>
+  <testsuite name="Products / Returns a single product from the inventory.Specifies the product's id you wish to retrieve" id="44175d69-0249-4aeb-96a7-4fa25438cc1f" timestamp="2025-04-16T12:13:06.599Z" tests="1" failures="0" errors="0" time="0.333">
+    <testcase name="Json response body presanst product id ,name,category,inStock" time="0.333" classname="ProductsReturnsASingleProductFromTheInventorySpecifiesTheProductsIdYouWishToRetrieve"/>
+  </testsuite>
+  <testsuite name="Products / Returns a single product from the inventory.Specifies the product's id you wish to retrieve Returns the product label in PDF format" id="0f7c2d0a-6b31-4bf8-a6c4-51f893b20fcd" timestamp="2025-04-16T12:13:06.599Z" tests="2" failures="0" errors="0" time="0.580">
+    <testcase name="Json response body presanst product id ,name,category,inStock" time="0.580" classname="ProductsReturnsASingleProductFromTheInventorySpecifiesTheProductsIdYouWishToRetrieveReturnsTheProductLabelInPdfFormat"/>
+    <testcase name="verify the json data present proprty are product-label,current-stock,price,manufacturer " time="0.580" classname="ProductsReturnsASingleProductFromTheInventorySpecifiesTheProductsIdYouWishToRetrieveReturnsTheProductLabelInPdfFormat"/>
+  </testsuite>
+  <testsuite name="Products / 404 Not found  : Indicates that there is no product with the specified id." id="98c9267a-4ae7-4c00-bdb9-1f349c76e068" timestamp="2025-04-16T12:13:06.599Z" tests="0" failures="0" errors="0" time="0.331"/>
+  <testsuite name="Cart / Create a new cart : To create a new cart, submit an empty POST request to the /carts endpoint." id="514498a0-74aa-46ca-b9df-87b892a74d10" timestamp="2025-04-16T12:13:06.599Z" tests="1" failures="0" errors="0" time="0.654">
+    <testcase name="Verify the staus code in 201" time="0.654" classname="CartCreateANewCartToCreateANewCartSubmitAnEmptyPostRequestToTheCartsEndpoint"/>
+  </testsuite>
+  <testsuite name="Cart / Return the cart Specifies the id of the cart you wish to retrieve." id="19c6cade-4cd7-4092-a524-769a39423b8c" timestamp="2025-04-16T12:13:06.599Z" tests="0" failures="0" errors="0" time="0.429"/>
+  <testsuite name="Cart / Return the cart Indicates that there is no cart with the specified id" id="3f98b84e-76e4-4f58-9fe5-ebee4e2f2d52" timestamp="2025-04-16T12:13:06.599Z" tests="0" failures="0" errors="0" time="0.343"/>
+  <testsuite name="Cart / Specifies the id of the cart for which you wish to retrieve the items.200 OK&#x9;Indicates a successful response." id="8047cf48-5b8d-4577-bbd4-86a3a011a1c0" timestamp="2025-04-16T12:13:06.599Z" tests="0" failures="0" errors="0" time="0.472"/>
+  <testsuite name="Cart / 404 Not found&#x9;Indicates that there is no cart with the specified id." id="c4e5c5ab-f9e2-4032-b961-2a214c68a5d6" timestamp="2025-04-16T12:13:06.599Z" tests="1" failures="0" errors="0" time="0.327">
+    <testcase name="Verify the status code 404 " time="0.327" classname="Cart404NotFoundX9IndicatesThatThereIsNoCartWithTheSpecifiedId"/>
+  </testsuite>
+  <testsuite name="Cart / Add an item to cart 201 Created&#x9;Indicates that the item has been added successfully." id="1f44066a-f5a2-4c25-a5b2-37a02fb72e99" timestamp="2025-04-16T12:13:06.599Z" tests="1" failures="1" errors="0" time="0.417">
+    <testcase name="Verify the status code 201 " time="0.417" classname="CartAddAnItemToCart201CreatedX9IndicatesThatTheItemHasBeenAddedSuccessfully">
+      <failure type="AssertionFailure" message="expected response to have status code 201 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: f8d2bc61-43da-4904-b7c1-fdba1ff77d2c.]]>
+        <![CDATA[Collection name: Simple Grocery Store API.]]>
+        <![CDATA[Request name: Cart / Add an item to cart 201 Created	Indicates that the item has been added successfully..]]>
+        <![CDATA[Test description: Verify the status code 201 .]]>
+        <![CDATA[Error message: expected response to have status code 201 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 201 but got 404
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Cart / Add an item to cart 400 Bad Request&#x9;Indicates that the parameters provided are invalid." id="11f48d63-804d-460c-8d23-c824d486eca1" timestamp="2025-04-16T12:13:06.599Z" tests="1" failures="1" errors="0" time="0.368">
+    <testcase name="Verify the status code 400 " time="0.368" classname="CartAddAnItemToCart400BadRequestX9IndicatesThatTheParametersProvidedAreInvalid">
+      <failure type="AssertionFailure" message="expected response to have status code 400 but got 404">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: f8d2bc61-43da-4904-b7c1-fdba1ff77d2c.]]>
+        <![CDATA[Collection name: Simple Grocery Store API.]]>
+        <![CDATA[Request name: Cart / Add an item to cart 400 Bad Request	Indicates that the parameters provided are invalid..]]>
+        <![CDATA[Test description: Verify the status code 400 .]]>
+        <![CDATA[Error message: expected response to have status code 400 but got 404.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 400 but got 404
+   at Object.eval sandbox-script.js:1:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="This API allows you to place a grocery order which will be ready for pick-up in the store." id="66d028d8-63ca-4354-b919-5d4617c46a44" timestamp="2025-04-16T12:13:06.599Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="GET /status  Returns the status of the API. Example response:Status UP indicates that the API is running as expected." id="e785e9bd-2560-4a97-a1d6-9d8890ca25bd" timestamp="2025-04-16T12:13:06.599Z" tests="0" failures="0" errors="0" time="0.763"/>
+</testsuites>

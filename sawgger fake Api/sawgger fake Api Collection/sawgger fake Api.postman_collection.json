@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "d8c98ac5-3b90-4135-959e-9482ddaa6dc4",
+		"name": "sawgger fake Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24695592"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"User 2\");\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Server\",\"Kestrel\");\r",
+									"});\r",
+									"pm.test(\"Content-Type is present\", function () {\r",
+									"    pm.response.to.have.header(\"Transfer-Encoding\",\"chunked\");\r",
+									"});\r",
+									"pm.test(\"Response time is less than 200ms\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+									"});\r",
+									"pm.test(\"Status code name has string\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"pm.test(\"Response size is less than 5000 bytes\", function () {\r",
+									"    var responseSize = pm.response.body.length; // Get the response body size\r",
+									"    pm.expect(responseSize).to.be.below(500);  // Ensure it is less than 5000 bytes\r",
+									"    pm.test(\"Body is correct\", function () {\r",
+									"        pm.response.to.have.body(\"User 4\");\r",
+									"    });\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "text/plain; v=1.0"
+							}
+						],
+						"url": {
+							"raw": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+							"protocol": "https",
+							"host": [
+								"fakerestapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Users"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"https://fakerestapi.azurewebsites.net/api/v1/Users\" -H  \"accept: text/plain; v=1.0\""
+					},
+					"response": []
+				},
+				{
+					"name": "Users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; v=1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":21,\"userName\":\"bas\",\"password\":\"123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fakerestapi.azurewebsites.net/api/v1/Users",
+							"protocol": "https",
+							"host": [
+								"fakerestapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Users"
+							]
+						},
+						"description": "Generated from cURL: curl -X POST \"https://fakerestapi.azurewebsites.net/api/v1/Users\" -H  \"accept: */*\" -H  \"Content-Type: application/json; v=1.0\" -d \"{\\\"id\\\":21,\\\"userName\\\":\\\"bas\\\",\\\"password\\\":\\\"123\\\"}\"\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Users id 22",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "https://fakerestapi.azurewebsites.net/api/v1/Users/21",
+							"protocol": "https",
+							"host": [
+								"fakerestapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Users",
+								"21"
+							]
+						},
+						"description": "Generated from cURL: curl -X GET \"https://fakerestapi.azurewebsites.net/api/v1/Users/21\" -H  \"accept: */*\"\r\n"
+					},
+					"response": []
+				},
+				{
+					"name": "Users/21",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json; v=1.0"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":22,\"userName\":\"bas\",\"password\":\"123\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://fakerestapi.azurewebsites.net/api/v1/Users/21",
+							"protocol": "https",
+							"host": [
+								"fakerestapi",
+								"azurewebsites",
+								"net"
+							],
+							"path": [
+								"api",
+								"v1",
+								"Users",
+								"21"
+							]
+						},
+						"description": "Generated from cURL: curl -X PUT \"https://fakerestapi.azurewebsites.net/api/v1/Users/21\" -H  \"accept: */*\" -H  \"Content-Type: application/json; v=1.0\" -d \"{\\\"id\\\":22,\\\"userName\\\":\\\"bas\\\",\\\"password\\\":\\\"123\\\"}\"\r\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Activities",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Check if name is John\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.title).to.eql(\"Activity 1\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Activities",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Activities"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"https://fakerestapi.azurewebsites.net/api/v1/Activities\" -H  \"accept: text/plain; v=1.0\""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"status code expect 200\",()=>{\r",
+							"pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; v=1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":2,\"idBook\":1,\"firstName\":\"J.K\",\"lastName\":\"Rolling\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors"
+					]
+				},
+				"description": "Generated from cURL: \r\ncurl -X POST \"https://fakerestapi.azurewebsites.net/api/v1/Authors\" -H  \"accept: text/plain; v=1.0\" -H  \"Content-Type: application/json; v=1.0\" -d \"{\\\"id\\\":0,\\\"idBook\\\":0,\\\"firstName\\\":\\\"string\\\",\\\"lastName\\\":\\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors books 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"status code expect 200\",()=>{\r",
+							"pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"authors",
+						"books",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: \r\ncurl -X GET \"https://fakerestapi.azurewebsites.net/api/v1/Authors/authors/books/1\" -H  \"accept: text/plain; v=1.0\""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors id 1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"status code expect 200\",()=>{\r",
+							"pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/2",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"2"
+					]
+				},
+				"description": "Generated from cURL: curl -X GET \"https://fakerestapi.azurewebsites.net/api/v1/Authors/1\" -H  \"accept: text/plain; v=1.0\""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors 1 update",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"status code expect 200\",()=>{\r",
+							"pm.response.to.have.status(200);\r",
+							"})\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain; v=1.0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json; v=1.0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\":3,\"idBook\":1,\"firstName\":\"J.K\",\"lastName\":\"Rolling\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/1",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"1"
+					]
+				},
+				"description": "Generated from cURL: curl -X PUT \"https://fakerestapi.azurewebsites.net/api/v1/Authors/1\" -H  \"accept: text/plain; v=1.0\" -H  \"Content-Type: application/json; v=1.0\" -d \"{\\\"id\\\":3,\\\"idBook\\\":1,\\\"firstName\\\":\\\"string\\\",\\\"lastName\\\":\\\"string\\\"}\""
+			},
+			"response": []
+		},
+		{
+			"name": "Authors 3 delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "https://fakerestapi.azurewebsites.net/api/v1/Authors/3",
+					"protocol": "https",
+					"host": [
+						"fakerestapi",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"v1",
+						"Authors",
+						"3"
+					]
+				},
+				"description": "Generated from cURL: curl -X DELETE \"https://fakerestapi.azurewebsites.net/api/v1/Authors/3\" -H  \"accept: */*\""
+			},
+			"response": []
+		}
+	]
+}

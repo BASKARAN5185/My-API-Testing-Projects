@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="sawgger fake Api" tests="10" time="2.377">
+  <testsuite name="user / Users" id="a3c1267b-2bbf-43e8-a6e7-c40014bd0637" timestamp="2025-04-16T12:03:08.615Z" tests="7" failures="2" errors="0" time="0.909">
+    <testcase name="Status code is 200" time="0.909" classname="UserUsers"/>
+    <testcase name="Body matches string" time="0.909" classname="UserUsers"/>
+    <testcase name="Content-Type is present" time="0.909" classname="UserUsers"/>
+    <testcase name="Response time is less than 200ms" time="0.909" classname="UserUsers">
+      <failure type="AssertionFailure" message="expected 909 to be below 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d8c98ac5-3b90-4135-959e-9482ddaa6dc4.]]>
+        <![CDATA[Collection name: sawgger fake Api.]]>
+        <![CDATA[Request name: user / Users.]]>
+        <![CDATA[Test description: Response time is less than 200ms.]]>
+        <![CDATA[Error message: expected 909 to be below 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected 909 to be below 200
+   at Object.eval sandbox-script.js:5:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Status code name has string" time="0.909" classname="UserUsers"/>
+    <testcase name="Response size is less than 5000 bytes" time="0.909" classname="UserUsers">
+      <failure type="AssertionFailure" message="Cannot read properties of undefined (reading 'length')">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d8c98ac5-3b90-4135-959e-9482ddaa6dc4.]]>
+        <![CDATA[Collection name: sawgger fake Api.]]>
+        <![CDATA[Request name: user / Users.]]>
+        <![CDATA[Test description: Response size is less than 5000 bytes.]]>
+        <![CDATA[Error message: Cannot read properties of undefined (reading 'length').]]>
+        <![CDATA[Stacktrace: TypeError: Cannot read properties of undefined (reading 'length')
+   at Object.eval sandbox-script.js:7:1).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="user / Users" id="cb75a786-3ea1-48ae-a7bc-a188dcb1c8bd" timestamp="2025-04-16T12:03:08.615Z" tests="0" failures="0" errors="0" time="0.161"/>
+  <testsuite name="user / Users id 22" id="bbf78657-64bd-41dc-a1f5-45a672fd122e" timestamp="2025-04-16T12:03:08.615Z" tests="0" failures="0" errors="0" time="0.154"/>
+  <testsuite name="user / Users/21" id="1d5e0f70-c015-4e5b-8eba-6861f84c141e" timestamp="2025-04-16T12:03:08.615Z" tests="0" failures="0" errors="0" time="0.164"/>
+  <testsuite name="Activities" id="217626c9-0c9c-4a77-9d58-26094d39235a" timestamp="2025-04-16T12:03:08.615Z" tests="1" failures="1" errors="0" time="0.156">
+    <testcase name="Check if name is John" time="0.156" classname="Activities">
+      <failure type="AssertionFailure" message="expected undefined to deeply equal 'Activity 1'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: d8c98ac5-3b90-4135-959e-9482ddaa6dc4.]]>
+        <![CDATA[Collection name: sawgger fake Api.]]>
+        <![CDATA[Request name: Activities.]]>
+        <![CDATA[Test description: Check if name is John.]]>
+        <![CDATA[Error message: expected undefined to deeply equal 'Activity 1'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to deeply equal 'Activity 1'
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Authors" id="3149ab71-ab77-410d-a9a8-c02bbd8044f3" timestamp="2025-04-16T12:03:08.615Z" tests="1" failures="0" errors="0" time="0.164">
+    <testcase name="status code expect 200" time="0.164" classname="Authors"/>
+  </testsuite>
+  <testsuite name="Authors books 1" id="50840346-2e77-4410-a9cc-9b1ff4a20988" timestamp="2025-04-16T12:03:08.615Z" tests="1" failures="0" errors="0" time="0.169">
+    <testcase name="status code expect 200" time="0.169" classname="AuthorsBooks1"/>
+  </testsuite>
+  <testsuite name="Authors id 1" id="f8bc979c-ec29-4209-a700-e4a7eb6aa7d8" timestamp="2025-04-16T12:03:08.615Z" tests="1" failures="0" errors="0" time="0.168">
+    <testcase name="status code expect 200" time="0.168" classname="AuthorsId1"/>
+  </testsuite>
+  <testsuite name="Authors 1 update" id="9c93593b-0905-4f82-8413-22384df4ed23" timestamp="2025-04-16T12:03:08.615Z" tests="1" failures="0" errors="0" time="0.170">
+    <testcase name="status code expect 200" time="0.170" classname="Authors1Update"/>
+  </testsuite>
+  <testsuite name="Authors 3 delete" id="8b88efeb-aaef-43a6-8c40-c2f367e53810" timestamp="2025-04-16T12:03:08.615Z" tests="0" failures="0" errors="0" time="0.162"/>
+</testsuites>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Art Institute of Chicago API" tests="16" time="15.809">
+  <testsuite name="Pagination / You can paginate through results using page and limit params:" id="3bc592ac-855a-4cd8-9730-22a8e9ca7819" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="3.723">
+    <testcase name="Status code is 200" time="3.723" classname="PaginationYouCanPaginateThroughResultsUsingPageAndLimitParams"/>
+  </testsuite>
+  <testsuite name="Pagination / You can paginate through results using page and limit params: Copy" id="edffc8d5-61cc-4594-9527-9563abf82e92" timestamp="2025-04-16T11:56:30.811Z" tests="2" failures="0" errors="0" time="0.604">
+    <testcase name="Status code is 200" time="0.604" classname="PaginationYouCanPaginateThroughResultsUsingPageAndLimitParamsCopy"/>
+    <testcase name="Check if the 'pagination' object contains correct data" time="0.604" classname="PaginationYouCanPaginateThroughResultsUsingPageAndLimitParamsCopy"/>
+  </testsuite>
+  <testsuite name="Pagination / You can paginate through results using page total 1277 i give the -1278 response must be given  as  400 Copy" id="b2929afd-59cb-4999-beff-dbb152630d16" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="1" errors="0" time="2.889">
+    <testcase name="Status code is 400" time="2.889" classname="PaginationYouCanPaginateThroughResultsUsingPageTotal1277IGiveThe1278ResponseMustBeGivenAs400Copy">
+      <failure type="AssertionFailure" message="expected response to have status code 400 but got 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 38059c55-44ff-40fe-b7fe-656baed7081c.]]>
+        <![CDATA[Collection name: Art Institute of Chicago API.]]>
+        <![CDATA[Request name: Pagination / You can paginate through results using page total 1277 i give the -1278 response must be given  as  400 Copy.]]>
+        <![CDATA[Test description: Status code is 400.]]>
+        <![CDATA[Error message: expected response to have status code 400 but got 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 400 but got 200
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Pagination / You can paginate through results 10000000" id="8fc1a4d6-24b9-44fa-b0d2-d0facb57b20f" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.432">
+    <testcase name="Status code is 403" time="0.432" classname="PaginationYouCanPaginateThroughResults10000000"/>
+  </testsuite>
+  <testsuite name="Pagination / You can paginate through results using page total 1277 i give the 1278 response must be given  as  400" id="c2f0bd94-6a7f-4098-976b-9847ed59ba58" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="1" errors="0" time="3.788">
+    <testcase name="Status code is 400" time="3.788" classname="PaginationYouCanPaginateThroughResultsUsingPageTotal1277IGiveThe1278ResponseMustBeGivenAs400">
+      <failure type="AssertionFailure" message="expected response to have status code 400 but got 200">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 38059c55-44ff-40fe-b7fe-656baed7081c.]]>
+        <![CDATA[Collection name: Art Institute of Chicago API.]]>
+        <![CDATA[Request name: Pagination / You can paginate through results using page total 1277 i give the 1278 response must be given  as  400.]]>
+        <![CDATA[Test description: Status code is 400.]]>
+        <![CDATA[Error message: expected response to have status code 400 but got 200.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status code 400 but got 200
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Pagination / You can paginate through results limit : -1 status code 500" id="8fc203db-b980-4106-aaf0-8de11ae939c6" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.449">
+    <testcase name="Status code is 500" time="0.449" classname="PaginationYouCanPaginateThroughResultsLimit1StatusCode500"/>
+  </testsuite>
+  <testsuite name="Pagination / You can paginate through results limit : xyz status code 500 Copy" id="d57e9378-472f-4d79-97b1-a1a6fa6d2cd4" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.418">
+    <testcase name="Status code is 403" time="0.418" classname="PaginationYouCanPaginateThroughResultsLimitXyzStatusCode500Copy"/>
+  </testsuite>
+  <testsuite name="Pagination / Invalid in EndPoint show the status code 400" id="5ace6c20-9164-4d54-b992-e0a9310f9649" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.349">
+    <testcase name="Status code is 400" time="0.349" classname="PaginationInvalidInEndPointShowTheStatusCode400"/>
+  </testsuite>
+  <testsuite name="Pagination / Invalid in EndPoint show the status code verison chande the url showing the odoo error 404" id="01c20f61-11de-4916-80c6-0db5ea4bd1fe" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.427">
+    <testcase name="Status code is 404" time="0.427" classname="PaginationInvalidInEndPointShowTheStatusCodeVerisonChandeTheUrlShowingTheOdooError404"/>
+  </testsuite>
+  <testsuite name="Basic API Validation / Quick Start : An API (opens new window)is a structured way that one software application can talk to another. APIs power much of the software we use today, from the apps on our phones and watches to technology we see in sports and TV shows. We have built" id="b53a05c5-0238-4646-b33f-bba48b9e623e" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="1" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: runtime:extensions~request: request url is empty
+    at Requester.request (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:421:26)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:156:37
+    at Requester.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester.js:508:16)
+    at RequesterPool.create (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\requester\requester-pool.js:67:22)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\postman-runtime\lib\runner\extensions\http-request.command.js:105:32
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:252:13
+    at wrapper (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:273:20)
+    at replenish (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:443:29)
+    at C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:453:13
+    at eachOfLimit (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:479:36)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at eachOfSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:815:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+    at _asyncMap (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:245:16)
+    at mapSeries (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:839:16)
+    at awaitable (C:\Users\xmedia\AppData\Roaming\npm\node_modules\newman\node_modules\async\dist\async.js:212:32)
+
+---
+]]></system-err>
+    <testcase name="Status code is 200" time="0.000" classname="BasicApiValidationQuickStartAnApiOpensNewWindowIsAStructuredWayThatOneSoftwareApplicationCanTalkToAnotherApIsPowerMuchOfTheSoftwareWeUseTodayFromTheAppsOnOurPhonesAndWatchesToTechnologyWeSeeInSportsAndTvShowsWeHaveBuilt">
+      <failure type="AssertionFailure" message="expected PostmanResponse{ …(5) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 38059c55-44ff-40fe-b7fe-656baed7081c.]]>
+        <![CDATA[Collection name: Art Institute of Chicago API.]]>
+        <![CDATA[Request name: Basic API Validation / Quick Start : An API (opens new window)is a structured way that one software application can talk to another. APIs power much of the software we use today, from the apps on our phones and watches to technology we see in sports and TV shows. We have built.]]>
+        <![CDATA[Test description: Status code is 200.]]>
+        <![CDATA[Error message: expected PostmanResponse{ …(5) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected PostmanResponse{ …(5) } to have property 'code'
+   at Object.eval sandbox-script.js:1:10).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic API Validation / If you want to see data for just one artwork, you can use the /artworks/{id} detail endpoint. For example, here's Starry Night and the Astronauts (opens new window)by Alma Thomas:" id="e720d8a1-d8b9-46c2-aa5e-7143cca1b08b" timestamp="2025-04-16T11:56:30.811Z" tests="2" failures="1" errors="0" time="0.383">
+    <testcase name="Status code is 200" time="0.383" classname="BasicApiValidationIfYouWantToSeeDataForJustOneArtworkYouCanUseTheArtworksIdDetailEndpointForExampleHeresStarryNightAndTheAstronautsOpensNewWindowByAlmaThomas"/>
+    <testcase name="Check if title is correct" time="0.383" classname="BasicApiValidationIfYouWantToSeeDataForJustOneArtworkYouCanUseTheArtworksIdDetailEndpointForExampleHeresStarryNightAndTheAstronautsOpensNewWindowByAlmaThomas">
+      <failure type="AssertionFailure" message="expected { data: { id: 129884, …(98) }, …(2) } in response to contain property 'title'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 38059c55-44ff-40fe-b7fe-656baed7081c.]]>
+        <![CDATA[Collection name: Art Institute of Chicago API.]]>
+        <![CDATA[Request name: Basic API Validation / If you want to see data for just one artwork, you can use the /artworks/{id} detail endpoint. For example, here's Starry Night and the Astronauts (opens new window)by Alma Thomas:.]]>
+        <![CDATA[Test description: Check if title is correct.]]>
+        <![CDATA[Error message: expected { data: { id: 129884, …(98) }, …(2) } in response to contain property 'title'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { data: { id: 129884, …(98) }, …(2) } in response to contain property 'title'
+   at Object.eval sandbox-script.js:2:11).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Basic API Validation / To retrieve a specific set of fields in Postman from the Art Institute of Chicago API, you can use the fields parameter to specify which data you want to be included in the response." id="470cc392-0a4c-4f24-93fe-5e72caef60d9" timestamp="2025-04-16T11:56:30.811Z" tests="12" failures="0" errors="0" time="0.521">
+    <testcase name="ID is present for artwork: Claude Monet" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Skyphos (Drinking Cup)" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Villa Pamphili outside Porta S. Pancrazio, from Views of Rome" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: View of an Italian Villa and Gardens (the Belvedere of the Vatican)" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Cliff Walk at Pourville" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Three Types of Chrysanthemums" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Seated Female Nude" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Water Lilies" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Cabaret Scene" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Paris Street; Rainy Day" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: Chickens" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+    <testcase name="ID is present for artwork: La Java" time="0.521" classname="BasicApiValidationToRetrieveASpecificSetOfFieldsInPostmanFromTheArtInstituteOfChicagoApiYouCanUseTheFieldsParameterToSpecifyWhichDataYouWantToBeIncludedInTheResponse"/>
+  </testsuite>
+  <testsuite name="Basic API Validation / If you want to search and filter the results, you can do so via our search endpoints. For example, here is a full-text search (opens new window)for all artworks whose metadata contains some mention of cats: https://api.artic.edu/api/v1/artworks/search?q=c" id="a1ec3939-44fd-4153-aa80-6558dee652d0" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.495">
+    <testcase name="Status code is 200" time="0.495" classname="BasicApiValidationIfYouWantToSearchAndFilterTheResultsYouCanDoSoViaOurSearchEndpointsForExampleHereIsAFullTextSearchOpensNewWindowForAllArtworksWhoseMetadataContainsSomeMentionOfCatsHttpsApiArticEduApiV1ArtworksSearchQC"/>
+  </testsuite>
+  <testsuite name="Basic API Validation / If you want to search and filter the results, filter is valid stauts code is 200" id="10207ff8-75ef-46fb-a968-002076b925f6" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.475">
+    <testcase name="Status code is 200" time="0.475" classname="BasicApiValidationIfYouWantToSearchAndFilterTheResultsFilterIsValidStautsCodeIs200"/>
+  </testsuite>
+  <testsuite name="Basic API Validation / Empty query  is valid status code is 200" id="42beded4-96ce-4715-8db6-bfbecdc5e40d" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.404">
+    <testcase name="Status code is 200" time="0.404" classname="BasicApiValidationEmptyQueryIsValidStatusCodeIs200"/>
+  </testsuite>
+  <testsuite name="Basic API Validation / Test Case: Search with special characters or SQL injection terms." id="5180101a-b442-433d-91f5-1b639b6a7d2e" timestamp="2025-04-16T11:56:30.811Z" tests="1" failures="0" errors="0" time="0.452">
+    <testcase name="Status code is 200" time="0.452" classname="BasicApiValidationTestCaseSearchWithSpecialCharactersOrSqlInjectionTerms"/>
+  </testsuite>
+</testsuites>
