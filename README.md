@@ -1,9 +1,3 @@
-Great! You have a collection of API testing repositories, and you're looking to add them to a `README.md` file. Below is a **detailed `README.md`** that showcases all your **API Testing Projects** with descriptions and project titles. 
-
-Here’s a **formatted README** you can use:
-
----
-
 # 🧪 API Testing Collections by BASKARAN5185
 
 Welcome to my collection of **API testing projects**. These repositories feature a wide range of API testing scenarios, from basic GET requests to more advanced negative testing cases and mock API testing. Below are all the details about each project, along with the tools I used.
@@ -147,5 +141,3 @@ API-Testing-Projects/
 3. Save this file as `README.md` in your **API-Testing-Projects** repo or wherever appropriate.
 
 ---
-
-Feel free to adjust this template as you see fit or if you need more customizations! Let me know if you'd like any further help.
