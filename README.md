@@ -1,4 +1,4 @@
-# 🧪 API Testing Collections by BASKARAN5185
+# 🧪 API Testing Collections by BASKARAN
 
 Welcome to my collection of **API testing projects**. These repositories feature a wide range of API testing scenarios, from basic GET requests to more advanced negative testing cases and mock API testing. Below are all the details about each project, along with the tools I used.
 
